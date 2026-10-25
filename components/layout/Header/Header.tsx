@@ -1,0 +1,226 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+import { NAV_ITEMS } from "@/constants/navigation";
+import { cn } from "@/utils/cn";
+
+import styles from "@/styles/components/Header.module.css";
+
+function ChevronIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={cn(styles.chevron, className)}
+      viewBox="0 0 10 10"
+      width="8"
+      height="8"
+      aria-hidden="true"
+    >
+      <path d="M1 3.2 5 7l4-3.8" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function Logo() {
+  return (
+    <Link href="/" className={styles.logo} aria-label="HomeNest Media - Trang chủ">
+      <svg className={styles.logoMark} viewBox="0 0 48 44" width="44" height="40" aria-hidden="true">
+        <defs>
+          <linearGradient id="hn-logo-grad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stopColor="#2b3a8f" />
+            <stop offset="1" stopColor="#14194d" />
+          </linearGradient>
+        </defs>
+        <path d="M2 4c6 1 9 5 11 10l9 4 9-4c2-5 5-9 11-10-1 8-4 13-9 16l2 10-13 10L11 30l2-10C8 17 3 12 2 4Z" fill="url(#hn-logo-grad)" />
+        <path d="M15 24l9 4 9-4-2 6-7 6-7-6-2-6Z" fill="#e2413b" />
+      </svg>
+      <span className={styles.logoText}>
+        <span className={styles.logoName}>
+          Home<span>Nest</span>
+          <small>.media</small>
+        </span>
+        <span className={styles.logoTagline}>Technology Meets Imagination</span>
+      </span>
+    </Link>
+  );
+}
+
+export default function Header() {
+  const pathname = usePathname();
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [openKey, setOpenKey] = useState<string | null>(null);
+  const [openSubKey, setOpenSubKey] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const closeAll = () => {
+    setMobileOpen(false);
+    setOpenKey(null);
+    setOpenSubKey(null);
+  };
+
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
+
+  return (
+    <header className={cn(styles.header, scrolled && styles.isScrolled)} id="site-header">
+      <div className="container">
+        {/* Top info bar */}
+        <div className={styles.topbar}>
+          <div className={styles.topbarInner}>
+            <a className={styles.topbarItem} href="tel:0898994298" id="topbar-hotline">
+              <span className={styles.topbarLabel}>Hotline</span> 0898994298
+            </a>
+            <a className={styles.topbarItem} href="mailto:info@homenest.media" id="topbar-email">
+              <span className={styles.topbarLabel}>Email</span> info@homenest.media
+            </a>
+            <span className={cn(styles.topbarItem, styles.hideMd)} id="topbar-address">
+              <span className={styles.topbarLabel}>Địa chỉ:</span> SAV4 The Sun Avenue, 28 Mai Chí Thọ, P Bình Trưng, Tp HCM
+            </span>
+            <span className={cn(styles.topbarItem, styles.topbarBrand)}>Homenest Media</span>
+          </div>
+        </div>
+
+        {/* Main navigation */}
+        <div className={styles.navwrap}>
+          <div className={styles.nav}>
+            <Logo />
+
+            <nav
+              className={cn(styles.menu, mobileOpen && styles.isOpen)}
+              id="main-navigation"
+              aria-label="Điều hướng chính"
+            >
+              <ul className={styles.menuList}>
+                {NAV_ITEMS.map((item) => {
+                  const hasChildren = !!item.children?.length;
+                  const isOpen = openKey === item.label;
+                  return (
+                    <li
+                      key={item.label}
+                      className={cn(styles.menuItem, hasChildren && styles.hasChildren, isOpen && styles.isOpen)}
+                    >
+                      <div className={styles.menuRow}>
+                        <Link
+                          href={item.href}
+                          className={cn(styles.menuLink, isActive(item.href) && styles.isActive)}
+                          onClick={closeAll}
+                        >
+                          {item.label}
+                          {hasChildren && <ChevronIcon className={styles.chevronUp} />}
+                        </Link>
+                        {hasChildren && (
+                          <button
+                            type="button"
+                            className={styles.menuToggle}
+                            aria-label={`Mở menu ${item.label}`}
+                            aria-expanded={isOpen}
+                            onClick={() => {
+                              setOpenKey(isOpen ? null : item.label);
+                              setOpenSubKey(null);
+                            }}
+                          >
+                            <ChevronIcon />
+                          </button>
+                        )}
+                      </div>
+
+                      {hasChildren && (
+                        <ul className={styles.dropdown}>
+                          {item.children!.map((child) => {
+                            const hasSub = !!child.children?.length;
+                            const subKey = `${item.label}/${child.label}`;
+                            const subOpen = openSubKey === subKey;
+                            return (
+                              <li
+                                key={child.label}
+                                className={cn(styles.dropdownItem, hasSub && styles.hasChildren, subOpen && styles.isOpen)}
+                              >
+                                <div className={styles.dropdownRow}>
+                                  <Link href={child.href} className={styles.dropdownLink} onClick={closeAll}>
+                                    <span className={styles.dropdownDot} aria-hidden="true" />
+                                    {child.label}
+                                  </Link>
+                                  {hasSub && (
+                                    <button
+                                      type="button"
+                                      className={styles.dropdownToggle}
+                                      aria-label={`Mở menu ${child.label}`}
+                                      aria-expanded={subOpen}
+                                      onClick={() => setOpenSubKey(subOpen ? null : subKey)}
+                                    >
+                                      <ChevronIcon />
+                                    </button>
+                                  )}
+                                </div>
+
+                                {hasSub && (
+                                  <ul className={styles.subdropdown}>
+                                    {child.children!.map((sub) => (
+                                      <li key={sub.label}>
+                                        <Link href={sub.href} className={styles.subdropdownLink} onClick={closeAll}>
+                                          {sub.label}
+                                        </Link>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                )}
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
+
+            {/* Actions */}
+            <div className={styles.actions}>
+              <button type="button" className={styles.actionsLang} id="btn-language" aria-label="Chọn ngôn ngữ">
+                VI
+                <span className={styles.actionsFlag} aria-hidden="true" />
+              </button>
+              <button type="button" className={styles.actionsBtn} id="btn-search" aria-label="Tìm kiếm">
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                  <circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" strokeWidth="1.8" />
+                  <path d="m16 16 4.5 4.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                </svg>
+              </button>
+              <button type="button" className={styles.actionsBtn} id="btn-apps" aria-label="Danh mục khác">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                  <rect x="3.5" y="3.5" width="7" height="7" rx="2" fill="none" stroke="currentColor" strokeWidth="1.7" />
+                  <rect x="13.5" y="3.5" width="7" height="7" rx="2" fill="none" stroke="currentColor" strokeWidth="1.7" />
+                  <rect x="3.5" y="13.5" width="7" height="7" rx="2" fill="none" stroke="currentColor" strokeWidth="1.7" />
+                  <rect x="13.5" y="13.5" width="7" height="7" rx="2" fill="none" stroke="currentColor" strokeWidth="1.7" />
+                </svg>
+              </button>
+              <button
+                type="button"
+                className={cn(styles.burger, mobileOpen && styles.isOpen)}
+                id="btn-burger"
+                aria-label="Mở menu"
+                aria-expanded={mobileOpen}
+                aria-controls="main-navigation"
+                onClick={() => setMobileOpen((v) => !v)}
+              >
+                <span />
+                <span />
+                <span />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+}
