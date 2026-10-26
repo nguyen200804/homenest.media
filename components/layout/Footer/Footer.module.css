@@ -9,7 +9,7 @@
 ul.hn-footer__services-list,
 ul.hn-footer__contact-list,
 ul.hn-footer__social-list,
-ul {
+ul.hn-footer__brands-list {
     list-style: none;
     padding: 0;
 }
@@ -25,9 +25,6 @@ ul {
 .hn-footer__container {
     position: relative;
     z-index: 0;
-    --padding-h: 40px;
-    padding-left: var(--padding-h);
-    padding-right: var(--padding-h);
     background: #fff;
     box-shadow: 0px -2px 12px #00000017;
 }
@@ -37,9 +34,8 @@ ul {
     margin-top: unset;
 }
 
+/* Chiều rộng + padding 2 bên do class global .container (globals.css) quyết định */
 .hn-footer__inner {
-    max-width: 1300px;
-    margin: 0 auto;
     padding-top: 50px;
     padding-bottom: 32px;
 }
@@ -246,10 +242,6 @@ p.hn-footer__copyright {
 
 /* <= 1200px */
 @media (max-width: 1200px) {
-    .hn-footer__container {
-        --padding-h: 32px;
-    }
-
     .hn-footer__desc {
         max-width: 330px;
         font-size: 15px;
@@ -288,10 +280,6 @@ p.hn-footer__copyright {
 
 /* <= 1024px */
 @media (max-width: 1024px) {
-    .hn-footer__container {
-        --padding-h: 24px;
-    }
-
     .hn-footer__grid {
         gap: 20px;
     }
@@ -364,10 +352,6 @@ p.hn-footer__copyright {
 
 /* <= 768px */
 @media (max-width: 768px) {
-    .hn-footer__container {
-        --padding-h: 20px;
-    }
-
     .hn-footer__grid {
         flex-wrap: wrap;
         gap: 32px 16px;
@@ -390,10 +374,6 @@ p.hn-footer__copyright {
 
 /* <= 576px */
 @media (max-width: 576px) {
-    .hn-footer__container {
-        --padding-h: 16px;
-    }
-
     p.hn-footer__copyright {
         font-size: 11px;
     }

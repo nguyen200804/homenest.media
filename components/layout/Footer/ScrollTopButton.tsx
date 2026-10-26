@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./Footer.module.css";
-import { RocketIcon } from "./icons";
+import { RocketIcon } from "@/components/ui/icons";
 
 export default function ScrollTopButton() {
     const handleClick = () => {

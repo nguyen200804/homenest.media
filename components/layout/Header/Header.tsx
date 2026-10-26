@@ -3,11 +3,12 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 import { NAV_ITEMS } from "@/constants/navigation";
 import { cn } from "@/utils/cn";
 
-import styles from "@/styles/components/Header.module.css";
+import styles from "./Header.module.css";
 
 function ChevronIcon({ className }: { className?: string }) {
   return (
@@ -26,23 +27,7 @@ function ChevronIcon({ className }: { className?: string }) {
 function Logo() {
   return (
     <Link href="/" className={styles.logo} aria-label="HomeNest Media - Trang chủ">
-      <svg className={styles.logoMark} viewBox="0 0 48 44" width="44" height="40" aria-hidden="true">
-        <defs>
-          <linearGradient id="hn-logo-grad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stopColor="#2b3a8f" />
-            <stop offset="1" stopColor="#14194d" />
-          </linearGradient>
-        </defs>
-        <path d="M2 4c6 1 9 5 11 10l9 4 9-4c2-5 5-9 11-10-1 8-4 13-9 16l2 10-13 10L11 30l2-10C8 17 3 12 2 4Z" fill="url(#hn-logo-grad)" />
-        <path d="M15 24l9 4 9-4-2 6-7 6-7-6-2-6Z" fill="#e2413b" />
-      </svg>
-      <span className={styles.logoText}>
-        <span className={styles.logoName}>
-          Home<span>Nest</span>
-          <small>.media</small>
-        </span>
-        <span className={styles.logoTagline}>Technology Meets Imagination</span>
-      </span>
+      <Image src="/images/logo/logo_homenest.media.png" alt="HomeNest Media - Trang chủ" width={250} height={66} />
     </Link>
   );
 }
@@ -72,7 +57,7 @@ export default function Header() {
 
   return (
     <header className={cn(styles.header, scrolled && styles.isScrolled)} id="site-header">
-      <div className="container">
+      <div className={styles.inner}>
         {/* Top info bar */}
         <div className={styles.topbar}>
           <div className={styles.topbarInner}>

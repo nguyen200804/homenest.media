@@ -53,6 +53,11 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
   padding-inline: 40px;
 }
 
+.fullWidth {
+  width: 100%;
+  max-width: none;
+}
+
 @media (min-width: 2000px) {
   .container { max-width: 1600px; }
 }

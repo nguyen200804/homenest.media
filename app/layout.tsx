@@ -3,20 +3,21 @@ import { Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 
 import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 import "./globals.css";
 
 const homeNest = localFont({
   src: [
-    { path: "../public/fonts/HomeNest/HomeNest-Thin.ttf", weight: "100", style: "normal" },
-    { path: "../public/fonts/HomeNest/HomeNest-ExtraLight.ttf", weight: "200", style: "normal" },
-    { path: "../public/fonts/HomeNest/HomeNest-Light.ttf", weight: "300", style: "normal" },
-    { path: "../public/fonts/HomeNest/HomeNest-Regular.ttf", weight: "400", style: "normal" },
-    { path: "../public/fonts/HomeNest/HomeNest-Medium.ttf", weight: "500", style: "normal" },
-    { path: "../public/fonts/HomeNest/HomeNest-SemiBold.ttf", weight: "600", style: "normal" },
-    { path: "../public/fonts/HomeNest/HomeNest-Bold.ttf", weight: "700", style: "normal" },
-    { path: "../public/fonts/HomeNest/HomeNest-ExtraBold.ttf", weight: "800", style: "normal" },
-    { path: "../public/fonts/HomeNest/HomeNest-Black.ttf", weight: "900", style: "normal" },
+    { path: "../public/fonts/HomeNest/HomeNest-Thin.otf", weight: "100", style: "normal" },
+    { path: "../public/fonts/HomeNest/HomeNest-ExtraLight.otf", weight: "200", style: "normal" },
+    { path: "../public/fonts/HomeNest/HomeNest-Light.otf", weight: "300", style: "normal" },
+    { path: "../public/fonts/HomeNest/HomeNest-Regular.otf", weight: "400", style: "normal" },
+    { path: "../public/fonts/HomeNest/HomeNest-Medium.otf", weight: "500", style: "normal" },
+    { path: "../public/fonts/HomeNest/HomeNest-SemiBold.otf", weight: "600", style: "normal" },
+    { path: "../public/fonts/HomeNest/HomeNest-Bold.otf", weight: "700", style: "normal" },
+    { path: "../public/fonts/HomeNest/HomeNest-ExtraBold.otf", weight: "800", style: "normal" },
+    { path: "../public/fonts/HomeNest/HomeNest-Black.otf", weight: "900", style: "normal" },
   ],
   variable: "--font-homenest",
   display: "swap",
@@ -38,9 +39,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${homeNest.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
         <Header />
-        {children}
+        <main>
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

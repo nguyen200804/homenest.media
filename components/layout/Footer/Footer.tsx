@@ -13,15 +13,9 @@ import {
     TikTokSocialIcon,
     WhatsAppIcon,
     YouTubeIcon,
-} from "./icons";
-
-/** Ghép nhiều class name từ CSS Module (bỏ qua class không tồn tại). */
-const cx = (...names: Array<string | false | undefined>) =>
-    names
-        .filter((n): n is string => Boolean(n))
-        .map((n) => styles[n])
-        .filter(Boolean)
-        .join(" ");
+} from "@/components/ui/icons";
+import TextGradient from "@/components/ui/TextGradient";
+import { cn } from "@/utils/cn";
 
 /* ------------------------------ Dữ liệu ------------------------------ */
 
@@ -80,10 +74,10 @@ const ADDRESSES = [
 ];
 
 const BRANDS = [
-    { alt: "HomeNest.com.vn", href: "https://homenest.com.vn", src: "/images/logo/logo_homenest.png", modifier: undefined },
-    { alt: "HomeNest.software", href: "https://homenest.software", src: "/images/logo/logo_homenest_software.png", modifier: "software" },
-    { alt: "HomeNest.media", href: "https://homenest.media", src: "/images/logo/logo_homenest_media.png", modifier: "media" },
-    { alt: "HomeNest.tech", href: "https://homenest.tech", src: "/images/logo/logo_homenest_tech.png", modifier: "tech" },
+    { alt: "HomeNest.com.vn", href: "https://homenest.com.vn", src: "/images/logo/logo_homenest.com.vn.png", modifier: "com.vn" },
+    { alt: "HomeNest.software", href: "https://homenest.software", src: "/images/logo/logo_homenest.software.png", modifier: "software" },
+    { alt: "HomeNest.media", href: "https://homenest.media", src: "/images/logo/logo_homenest.media.png", modifier: "media" },
+    { alt: "HomeNest.tech", href: "https://homenest.tech", src: "/images/logo/logo_homenest.tech.png", modifier: "tech" },
 ];
 
 const QUICK_LINKS = [
@@ -97,31 +91,31 @@ const QUICK_LINKS = [
 
 export default function Footer() {
     return (
-        <footer className={cx("footer")}>
+        <footer className={styles["footer"]}>
             <SocialGradientDefs />
 
             {/* ===== Nội dung chính của footer ===== */}
-            <div className={cx("hn-footer__container")}>
-                <span className={cx("hn-footer__spot", "hn-footer__spot1")} />
-                <span className={cx("hn-footer__spot", "hn-footer__spot2")} />
-                <span className={cx("hn-footer__spot", "hn-footer__spot3")} />
+            <div className={styles["hn-footer__container"]}>
+                <span className={cn(styles["hn-footer__spot"], styles["hn-footer__spot1"])} />
+                <span className={cn(styles["hn-footer__spot"], styles["hn-footer__spot2"])} />
+                <span className={cn(styles["hn-footer__spot"], styles["hn-footer__spot3"])} />
 
-                <div className={cx("hn-footer__inner")}>
-                    <div className={cx("hn-footer__top")}>
-                        <div className={cx("hn-footer__grid")}>
+                <div className={cn("container", styles["hn-footer__inner"])}>
+                    <div className={styles["hn-footer__top"]}>
+                        <div className={styles["hn-footer__grid"]}>
                             {/* Cột 1 - Giới thiệu */}
-                            <section className={cx("hn-footer__col", "hn-footer__about")}>
-                                <Link href="/" className={cx("hn-footer__logo")}>
+                            <section className={cn(styles["hn-footer__col"], styles["hn-footer__about"])}>
+                                <Link href="/" className={styles["hn-footer__logo"]}>
                                     <Image
-                                        className={cx("hn-footer__logo-img")}
-                                        src="/images/logo/logo_homenest_media.png"
+                                        className={styles["hn-footer__logo-img"]}
+                                        src="/images/logo/logo_homenest.media.png"
                                         alt="HomeNest Tech"
                                         width={200}
                                         height={60}
                                     />
                                 </Link>
 
-                                <p className={cx("hn-footer__desc")}>
+                                <p className={styles["hn-footer__desc"]}>
                                     Với chúng tôi, không có giới hạn cho sự sáng tạo và khả năng
                                     phát triển. Hãy để chúng tôi giúp bạn thăng hoa trong môi
                                     trường kỹ thuật số.
@@ -129,23 +123,26 @@ export default function Footer() {
                             </section>
 
                             {/* Cột 2 - Liên hệ */}
-                            <section className={cx("hn-footer__col", "hn-footer__contact")}>
-                                <h4 className={cx("hn-footer__heading")}>
-                                    <span className={cx("hn-footer__text-gradient")}>LIÊN HỆ</span>
+                            <section className={cn(styles["hn-footer__col"], styles["hn-footer__contact"])}>
+                                <h4 className={styles["hn-footer__heading"]}>
+                                    <TextGradient text="LIÊN HỆ" angle={90} />
                                 </h4>
 
-                                <ul className={cx("hn-footer__contact-list")}>
+                                <ul className={styles["hn-footer__contact-list"]}>
                                     {CONTACTS.map((item) => (
                                         <li
                                             key={item.key}
-                                            className={cx(
-                                                "hn-footer__contact-item",
-                                                `hn-footer__contact-item--${item.key}`,
+                                            className={cn(
+                                                styles["hn-footer__contact-item"],
+                                                styles[`hn-footer__contact-item--${item.key}`],
                                             )}
                                         >
-                                            <span className={cx("hn-footer__label")}>{item.label}</span>
+                                            <span className={styles["hn-footer__label"]}>{item.label}</span>
                                             <a
-                                                className={cx("hn-footer__value", item.linked && "linked")}
+                                                className={cn(
+                                                    styles["hn-footer__value"],
+                                                    item.linked && styles["linked"],
+                                                )}
                                                 href={item.href}
                                                 {...(item.external && {
                                                     target: "_blank",
@@ -161,17 +158,17 @@ export default function Footer() {
 
                             {/* Cột 3 - Dịch vụ */}
                             <nav
-                                className={cx("hn-footer__col", "hn-footer__services")}
+                                className={cn(styles["hn-footer__col"], styles["hn-footer__services"])}
                                 aria-label="Dịch vụ"
                             >
-                                <h4 className={cx("hn-footer__heading")}>
-                                    <span className={cx("hn-footer__text-gradient")}>DỊCH VỤ</span>
+                                <h4 className={styles["hn-footer__heading"]}>
+                                    <TextGradient text="DỊCH VỤ" angle={90} />
                                 </h4>
 
-                                <ul className={cx("hn-footer__services-list")}>
+                                <ul className={styles["hn-footer__services-list"]}>
                                     {SERVICES.map((item) => (
-                                        <li key={item.href} className={cx("hn-footer__services-item")}>
-                                            <Link className={cx("hn-footer__services-link")} href={item.href}>
+                                        <li key={item.href} className={styles["hn-footer__services-item"]}>
+                                            <Link className={styles["hn-footer__services-link"]} href={item.href}>
                                                 {item.label}
                                             </Link>
                                         </li>
@@ -180,18 +177,16 @@ export default function Footer() {
                             </nav>
 
                             {/* Cột 4 - Mạng xã hội + Địa chỉ */}
-                            <section className={cx("hn-footer__col", "hn-footer__social")}>
-                                <h4 className={cx("hn-footer__heading")}>
-                                    <span className={cx("hn-footer__text-gradient")}>
-                                        THEO DÕI CHÚNG TÔI TẠI
-                                    </span>
+                            <section className={cn(styles["hn-footer__col"], styles["hn-footer__social"])}>
+                                <h4 className={styles["hn-footer__heading"]}>
+                                    <TextGradient text="THEO DÕI CHÚNG TÔI TẠI" angle={90} />
                                 </h4>
 
-                                <ul className={cx("hn-footer__social-list")} aria-label="Mạng xã hội">
+                                <ul className={styles["hn-footer__social-list"]} aria-label="Mạng xã hội">
                                     {SOCIALS.map(({ label, href, Icon }) => (
-                                        <li key={label} className={cx("hn-footer__social-item")}>
+                                        <li key={label} className={styles["hn-footer__social-item"]}>
                                             <a
-                                                className={cx("hn-footer__social-link")}
+                                                className={styles["hn-footer__social-link"]}
                                                 href={href}
                                                 aria-label={label}
                                             >
@@ -201,12 +196,12 @@ export default function Footer() {
                                     ))}
                                 </ul>
 
-                                <hr className={cx("hn-footer__line")} />
+                                <hr className={styles["hn-footer__line"]} />
 
                                 {ADDRESSES.map((addr) => (
-                                    <div key={addr.label} className={cx("hn-footer__address")}>
-                                        <span className={cx("hn-footer__label")}>{addr.label}</span>
-                                        <p className={cx("hn-footer__address-text")}>{addr.text}</p>
+                                    <div key={addr.label} className={styles["hn-footer__address"]}>
+                                        <span className={styles["hn-footer__label"]}>{addr.label}</span>
+                                        <p className={styles["hn-footer__address-text"]}>{addr.text}</p>
                                     </div>
                                 ))}
                             </section>
@@ -214,19 +209,19 @@ export default function Footer() {
                     </div>
 
                     {/* Dãy logo thương hiệu */}
-                    <div className={cx("hn-footer__brands")}>
-                        <ul className={cx("hn-footer__brands-list")}>
+                    <div className={styles["hn-footer__brands"]}>
+                        <ul className={styles["hn-footer__brands-list"]}>
                             {BRANDS.map((brand) => (
                                 <li
                                     key={brand.alt}
-                                    className={cx(
-                                        "hn-footer__brand-item",
-                                        brand.modifier && `hn-footer__brand-item--${brand.modifier}`,
+                                    className={cn(
+                                        styles["hn-footer__brand-item"],
+                                        brand.modifier && styles[`hn-footer__brand-item--${brand.modifier}`],
                                     )}
                                 >
-                                    <a className={cx("hn-footer__brand-link")} href={brand.href}>
+                                    <a className={styles["hn-footer__brand-link"]} href={brand.href}>
                                         <Image
-                                            className={cx("hn-footer__brand-logo")}
+                                            className={styles["hn-footer__brand-logo"]}
                                             src={brand.src}
                                             alt={brand.alt}
                                             width={160}
@@ -238,8 +233,8 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    <div className={cx("hn-footer__bottom")}>
-                        <p className={cx("hn-footer__copyright")}>
+                    <div className={styles["hn-footer__bottom"]}>
+                        <p className={styles["hn-footer__copyright"]}>
                             Copyright © 2023 QuestX. All Rights Reserved. Design by HomeNest
                         </p>
                     </div>
@@ -247,15 +242,15 @@ export default function Footer() {
             </div>
 
             {/* ===== Thanh icon liên hệ nhanh (giữa bên phải) ===== */}
-            <ul className={cx("hn__all-icons", "all-icons")}>
+            <ul className={cn(styles["hn__all-icons"], styles["all-icons"])}>
                 {QUICK_LINKS.map((item) => {
                     const { label, href, Icon, external } = item;
-                    const extraClass = "className" in item ? item.className : undefined;
+                    const extraClass = "className" in item ? styles[item.className] : undefined;
                     return (
                         <li key={label}>
                             {external ? (
                                 <a
-                                    className={extraClass ? cx(extraClass) : undefined}
+                                    className={extraClass}
                                     href={href}
                                     target="_blank"
                                     rel="nofollow noopener noreferrer"
@@ -264,12 +259,12 @@ export default function Footer() {
                                     <span>{label}</span>
                                 </a>
                             ) : href.startsWith("/") ? (
-                                <Link className={extraClass ? cx(extraClass) : undefined} href={href}>
+                                <Link className={extraClass} href={href}>
                                     <Icon />
                                     <span>{label}</span>
                                 </Link>
                             ) : (
-                                <a className={extraClass ? cx(extraClass) : undefined} href={href}>
+                                <a className={extraClass} href={href}>
                                     <Icon />
                                     <span>{label}</span>
                                 </a>

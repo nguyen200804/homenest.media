@@ -1,0 +1,11 @@
+/*
+ * TODO: chuyển CSS của nút scroll từ Footer.module.css sang file này:
+ *  - .homenest__scroll-top-page
+ *  - style của #scrollTopBtn
+ *  - .show        -> class được thêm khi cuộn >= 300px
+ *                    (CSS cũ viết dạng "#scrollTopBtn.show" thì giữ nguyên)
+ *  - var(--progress) -> % cuộn (0%–100%), component tự cập nhật
+ */
+.homenest__scroll-top-page {}
+
+.show {}

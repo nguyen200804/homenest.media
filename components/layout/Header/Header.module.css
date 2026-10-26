@@ -9,8 +9,8 @@
   --hn-navy: #1b2366;
   --hn-gold: #f3d98b;
   --hn-border: #dcdce0;
-  --hn-radius-lg: 28px;
-  --hn-topbar-h: 34px;
+  --hn-radius-lg: 20px;
+  --hn-topbar-h: 40px;
   --hn-gap: 10px;
   --hn-ease: cubic-bezier(0.22, 0.8, 0.28, 1);
 
@@ -21,6 +21,42 @@
   width: 100%;
   padding-top: 6px;
   font-family: var(--font-homenest), Arial, Helvetica, sans-serif;
+}
+
+/* Full-width wrapper (no max-width), same side gutters as global .container */
+.inner {
+  width: 100%;
+  padding-inline: 10px;
+}
+
+@media (max-width: 1200px) {
+  .inner {
+    padding-inline: 32px;
+  }
+}
+
+@media (max-width: 996px) {
+  .inner {
+    padding-inline: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .inner {
+    padding-inline: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .inner {
+    padding-inline: 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  .inner {
+    padding-inline: 16px;
+  }
 }
 
 .header a {
@@ -49,10 +85,10 @@
   margin-bottom: var(--hn-gap);
   background: var(--hn-ink);
   color: #fff;
-  border-radius: 999px;
+  border-radius: 20px;
   display: flex;
   align-items: center;
-  padding: 0 28px;
+  padding-inline: 40px;
 }
 
 .topbarInner {
@@ -60,9 +96,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  font-size: 11px;
-  font-weight: 500;
+  gap: 40px;
+  font-size: 14px;
+  font-weight: 400;
   white-space: nowrap;
 }
 
@@ -82,6 +118,7 @@ a.topbarItem:hover {
 .topbarBrand {
   font-weight: 600;
   letter-spacing: 0.01em;
+  margin-left: auto;
 }
 
 /* ---------- Main nav pill ---------- */
@@ -103,12 +140,12 @@ a.topbarItem:hover {
 }
 
 .nav {
-  height: 72px;
+  height: 130px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 0 28px 0 20px;
+  padding-inline: 40px;
 }
 
 /* ---------- Logo ---------- */
@@ -187,8 +224,8 @@ a.topbarItem:hover {
   gap: 5px;
   padding: 10px 16px;
   border-radius: 999px;
-  font-size: 11.5px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 500;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: var(--hn-ink);
@@ -197,7 +234,7 @@ a.topbarItem:hover {
 }
 
 .menuLink:hover,
-.menuItem:hover > .menuRow > .menuLink {
+.menuItem:hover>.menuRow>.menuLink {
   background: rgba(14, 14, 16, 0.06);
 }
 
@@ -220,7 +257,7 @@ a.topbarItem:hover {
   transform: rotate(180deg);
 }
 
-.menuItem:hover > .menuRow .chevronUp {
+.menuItem:hover>.menuRow .chevronUp {
   transform: rotate(0deg);
 }
 
@@ -253,8 +290,8 @@ a.topbarItem:hover {
   height: 16px;
 }
 
-.menuItem.hasChildren:hover > .dropdown,
-.menuItem.hasChildren:focus-within > .dropdown {
+.menuItem.hasChildren:hover>.dropdown,
+.menuItem.hasChildren:focus-within>.dropdown {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -292,19 +329,19 @@ a.topbarItem:hover {
   transition: opacity 0.2s ease, margin 0.25s var(--hn-ease);
 }
 
-.dropdownItem:hover > .dropdownRow .dropdownLink,
+.dropdownItem:hover>.dropdownRow .dropdownLink,
 .dropdownLink:focus-visible {
   color: var(--hn-accent);
   background: rgba(255, 255, 255, 0.04);
 }
 
-.dropdownItem:hover > .dropdownRow .dropdownDot {
+.dropdownItem:hover>.dropdownRow .dropdownDot {
   opacity: 1;
   margin-left: 0;
 }
 
 /* chevron arrow indicator for items with sub-menu (desktop) */
-.dropdownItem.hasChildren > .dropdownRow .dropdownLink::after {
+.dropdownItem.hasChildren>.dropdownRow .dropdownLink::after {
   content: "";
   margin-left: auto;
   width: 6px;
@@ -341,8 +378,8 @@ a.topbarItem:hover {
   width: 10px;
 }
 
-.dropdownItem.hasChildren:hover > .subdropdown,
-.dropdownItem.hasChildren:focus-within > .subdropdown {
+.dropdownItem.hasChildren:hover>.subdropdown,
+.dropdownItem.hasChildren:focus-within>.subdropdown {
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
@@ -425,13 +462,31 @@ a.topbarItem:hover {
   transition: transform 0.3s var(--hn-ease), opacity 0.2s ease, top 0.3s var(--hn-ease);
 }
 
-.burger span:nth-child(1) { top: 12px; }
-.burger span:nth-child(2) { top: 17px; }
-.burger span:nth-child(3) { top: 22px; }
+.burger span:nth-child(1) {
+  top: 12px;
+}
 
-.burger.isOpen span:nth-child(1) { top: 17px; transform: rotate(45deg); }
-.burger.isOpen span:nth-child(2) { opacity: 0; }
-.burger.isOpen span:nth-child(3) { top: 17px; transform: rotate(-45deg); }
+.burger span:nth-child(2) {
+  top: 17px;
+}
+
+.burger span:nth-child(3) {
+  top: 22px;
+}
+
+.burger.isOpen span:nth-child(1) {
+  top: 17px;
+  transform: rotate(45deg);
+}
+
+.burger.isOpen span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.isOpen span:nth-child(3) {
+  top: 17px;
+  transform: rotate(-45deg);
+}
 
 /* ---------- Focus states ---------- */
 
@@ -538,12 +593,12 @@ a.topbarItem:hover {
     border-radius: 50%;
   }
 
-  .menuItem.isOpen > .menuRow .menuToggle .chevron,
-  .dropdownItem.isOpen > .dropdownRow .dropdownToggle .chevron {
+  .menuItem.isOpen>.menuRow .menuToggle .chevron,
+  .dropdownItem.isOpen>.dropdownRow .dropdownToggle .chevron {
     transform: rotate(180deg);
   }
 
-  .dropdownItem.hasChildren > .dropdownRow .dropdownLink::after {
+  .dropdownItem.hasChildren>.dropdownRow .dropdownLink::after {
     display: none;
   }
 
@@ -576,8 +631,8 @@ a.topbarItem:hover {
     border-radius: 12px;
   }
 
-  .menuItem.isOpen > .dropdown,
-  .dropdownItem.isOpen > .subdropdown {
+  .menuItem.isOpen>.dropdown,
+  .dropdownItem.isOpen>.subdropdown {
     display: block;
   }
 
@@ -610,4 +665,3 @@ a.topbarItem:hover {
     transition: none !important;
   }
 }
-
