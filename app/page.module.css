@@ -683,3 +683,88 @@
 }
 
 /* End - Team Section */
+
+/* Start - Testimonial Section */
+.testimonialSection {
+    background-color: rgba(57, 201, 134, 0);
+}
+
+.testimonialSection svg {
+    fill: #ffcc00;
+    width: 20px;
+}
+
+.testimonialWrapper {
+    background-color: rgba(214, 72, 165, 0);
+}
+
+.testimonialHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.testimonialTitle {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.testimonialRating {
+    display: flex;
+    gap: 5px;
+}
+
+.testimonialRating svg {
+    width: 28px;
+}
+
+.testimonialList {
+    column-count: 4;
+    column-gap: 16px;
+    position: relative;
+}
+
+.testimonialList::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to bottom, #fff0, #ffff 100%);
+
+    pointer-events: none;
+}
+
+.testimonialItem {
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    /* hỗ trợ trình duyệt cũ */
+    page-break-inside: avoid;
+    padding: 28px;
+    border: 1px solid #181818;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+.testimonialCard {
+    background-color: rgba(131, 18, 207, 0);
+}
+
+.testimonialCardHeader {
+    background-color: rgba(229, 176, 52, 0);
+}
+
+.testimonialCardName {
+    font-size: 22px;
+}
+
+.testimonialCardRating {
+    display: flex;
+    gap: 4px;
+    margin: 10px 0 22px;
+}
+
+.testimonialCardContent {
+    background-color: rgba(8, 211, 177, 0);
+}
+
+/* End - Testimonial Section */

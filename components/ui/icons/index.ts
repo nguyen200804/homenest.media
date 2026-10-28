@@ -14,3 +14,4 @@ export {
     WhatsAppIcon,
 } from "./ContactIcons";
 export { RocketIcon } from "./RocketIcon";
+export { default as Star } from "./Star";

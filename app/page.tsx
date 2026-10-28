@@ -4,7 +4,9 @@ import { ButtonBottomRight } from "@/components/ui/Buttons";
 import { ManropeText, TextGradient } from "@/components/ui/Text";
 import { PROJECTS } from "@/constants/projects";
 import { TEAM_ITEMS } from "@/constants/team";
+import { LIST_TESTIMONIAL } from "@/constants/testimonial";
 import FAQSection from "@/components/sections/FAQSection";
+import { Star } from "@/components/ui/icons";
 
 /** Số dự án mỗi nhóm trong marquee. */
 const PROJECT_GROUP_SIZE = 4;
@@ -170,7 +172,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
       </section>
 
 
@@ -230,7 +231,6 @@ export default function Home() {
 
           </div>
         </div>
-
       </section>
 
 
@@ -350,7 +350,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
       </section>
 
 
@@ -413,8 +412,40 @@ export default function Home() {
             </div>
           ))}
         </div>
+      </section>
 
 
+
+      <section className={styles.testimonialSection}>
+        <div className="container">
+          <div className={styles.testimonialWrapper}>
+            <header className={styles.testimonialHeader}>
+              <h2 className={styles.testimonialTitle}>Khách hàng nói gì về <TextGradient text="HomeNest.Media" /></h2>
+              <div className={styles.testimonialRating} role="img" aria-label="Đánh giá 5 trên 5 sao">
+                {Array.from({ length: 5 }).map((_, starIndex) => (
+                  <Star key={starIndex} />
+                ))}
+              </div>
+            </header>
+            <ul className={styles.testimonialList}>
+              {LIST_TESTIMONIAL.map((item, index) => (
+                <li key={index} className={styles.testimonialItem}>
+                  <article className={styles.testimonialCard}>
+                    <header className={styles.testimonialCardHeader}>
+                      <h3 className={styles.testimonialCardName}>{item.name}</h3>
+                      <div className={styles.testimonialCardRating} role="img" aria-label={`Đánh giá ${item.star} trên 5 sao`}>
+                        {Array.from({ length: item.star }).map((_, starIndex) => (
+                          <Star key={starIndex} />
+                        ))}
+                      </div>
+                    </header>
+                    <blockquote className={styles.testimonialCardContent}>{item.content}</blockquote>
+                  </article>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </section>
 
 
