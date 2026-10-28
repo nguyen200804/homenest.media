@@ -6,6 +6,8 @@
 /* START - FOOTER CONTAIN */
 /* ====================== */
 /* ===== Reset / Base ===== */
+
+
 ul.hn-footer__services-list,
 ul.hn-footer__contact-list,
 ul.hn-footer__social-list,
@@ -27,6 +29,7 @@ ul.hn-footer__brands-list {
     z-index: 0;
     background: #fff;
     box-shadow: 0px -2px 12px #00000017;
+    overflow: hidden;
 }
 
 .hn-footer__container * {

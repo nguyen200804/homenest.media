@@ -1,0 +1,254 @@
+/* Start - Hero Section */
+.heroSection {
+    background-color: #f0f2f4;
+    padding: 32px 0;
+}
+
+.heroWrapper {
+    background-color: rgba(0, 255, 0, 0);
+}
+
+.heroVideo {
+    background-color: #00f0;
+    aspect-ratio: 16/7.2;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.heroVideo video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.heroContent {
+    gap: 40px;
+    display: flex;
+    margin-top: 32px;
+}
+
+.heroIntro,
+.heroStat {
+    z-index: 0;
+    background-color: #e0e2e5;
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 60px 60px 60px 40px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.heroIntro {
+    flex: 40;
+}
+
+.heroIntroImage,
+.heroStatImage {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+}
+
+.heroIntroImage,
+.heroStat:nth-of-type(2) .heroStatImage {
+    width: 100%;
+    height: 100%;
+}
+
+.heroIntroTitle,
+.heroStatTitle {
+    font-size: 32px;
+}
+
+.heroIntroTitle,
+.heroStat:nth-of-type(2) .heroStatTitle {
+    color: #fff;
+}
+
+.heroIntroText,
+.heroStat:nth-of-type(2) .heroStatInfo {
+    color: #fff;
+}
+
+.heroIntroTitle {
+    background-color: rgba(255, 128, 0, 0);
+}
+
+.heroIntroText {
+    background-color: rgba(128, 0, 255, 0);
+}
+
+.heroStat {
+    flex: 30;
+}
+
+/* .heroStat:first-of-type .heroStatImage{
+    height: 347px;
+} */
+
+.heroStatImage {
+    background-color: rgba(128, 255, 0, 0);
+}
+
+.heroStatTitle {
+    background-color: rgba(255, 0, 128, 0);
+}
+
+.heroStatInfo {
+    align-self: flex-end;
+}
+
+.heroStatNumber {
+    font-size: 86px;
+    line-height: 1.0em;
+    font-weight: 700;
+    text-align: right;
+    letter-spacing: -0.02em;
+    color: transparent;
+}
+
+
+.heroStat:nth-of-type(2) .heroStatNumber {
+    -webkit-text-stroke: 1px #ffffff;
+}
+
+.heroStat:nth-of-type(3) .heroStatNumber {
+    -webkit-text-stroke: 1px #CB515A;
+
+}
+
+.heroStatLabel {
+    background-color: rgba(255, 128, 128, 0);
+}
+
+.heroButton {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #f0f2f4;
+    --padding: 10px;
+    --radius: 20px;
+    border-top-left-radius: var(--radius);
+    padding: var(--padding) 0 0 var(--padding);
+}
+
+.heroButton::before {
+    content: '';
+    position: absolute;
+    width: var(--radius);
+    height: var(--radius);
+    bottom: 0;
+    left: calc(var(--radius) * -1);
+    border-top-left-radius: var(--radius);
+    background: #f0f2f4;
+    corner-shape: scoop;
+    z-index: 9;
+}
+
+.heroButton::after {
+    content: '';
+    position: absolute;
+    width: var(--radius);
+    height: var(--radius);
+    top: calc(var(--radius) * -1);
+    right: 0;
+    border-top-left-radius: var(--radius);
+    background: #f0f2f4;
+    corner-shape: scoop;
+    z-index: 0;
+}
+
+/* End - Hero Section */
+
+
+
+/* Start - Service Section */
+.serviceSection {
+    padding: 72px 0;
+}
+
+.serviceWrapper {
+    display: flex;
+    gap: 50px;
+}
+
+.serviceIntro {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.serviceTitle {
+    font-size: 40px;
+}
+
+.serviceStat {
+    background-color: rgba(98, 247, 71, 0);
+}
+
+.serviceStatNumber {
+    font-size: 160px;
+    line-height: 0.8em;
+    font-weight: 800;
+
+    /* Chữ nền trong suốt + viền gradient */
+    position: relative;
+    width: fit-content;
+    background: linear-gradient(var(--tg-angle, 90deg),
+            var(--tg-from, #386bb7),
+            var(--tg-to, #e24c4a));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 4px transparent;
+}
+
+/* Lớp phủ: khoét rỗng phần ruột chữ, chỉ để lộ viền gradient */
+.serviceStatNumber::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    background: none;
+    -webkit-text-fill-color: var(--background);
+    -webkit-text-stroke: 0;
+}
+
+
+.serviceStatLabel {
+    background: linear-gradient(to bottom, #ffffff00, #ffffff);
+    padding-top: 50px;
+    margin-top: -50px;
+    position: relative;
+    z-index: 1;
+}
+
+.serviceList {
+    flex: 1;
+}
+
+.serviceCard {
+    padding-bottom: 28px;
+    border-bottom: 1px solid #000;
+    margin-bottom: 24px;
+}
+
+.serviceCard:last-child {
+    margin-bottom: 0;
+}
+
+.serviceCardTitle {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.serviceCardText {
+    background-color: rgba(188, 224, 55, 0);
+}
+
+/* End - Service Section */

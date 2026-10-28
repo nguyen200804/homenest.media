@@ -1,0 +1,48 @@
+.buttonBottomRight {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    background-color: #181818;
+    border-radius: 50%;
+    transition: background-color .3s;
+}
+
+.buttonBottomRight:hover {
+    background-color: #F14F44;
+
+}
+
+.buttonBottomRight .icon,
+.buttonBottomRight .iconHover {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .3s;
+}
+
+.buttonBottomRight .icon {
+    transform: translateX(0%);
+}
+
+.buttonBottomRight .iconHover {
+    transform: translateX(-100%);
+}
+
+.buttonBottomRight:hover .icon {
+    transform: translateX(100%);
+}
+
+.buttonBottomRight:hover .iconHover {
+    transform: translateX(0%);
+}
+
+.buttonBottomRight svg {
+    width: 40%;
+    height: 40%;
+    fill: #fff;
+}
