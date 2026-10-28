@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { CSSProperties, ElementType } from "react";
 import styles from "./TextGradient.module.css";
 
-type TextGradientProps = {
+export type TextGradientProps = {
     /** Nội dung chữ hiển thị. */
     text: string;
     /** Thẻ HTML bao ngoài ("span", "h1", "h2", "p", ...). Mặc định: "span". */
@@ -15,6 +15,8 @@ type TextGradientProps = {
     angle?: number;
     /** Nếu có, chữ trở thành đường dẫn (nội bộ dùng Link, http(s) mở tab mới). */
     link?: string;
+    /** Chữ nền trong suốt, chỉ hiển thị viền gradient. Mặc định: false. */
+    textStrokeGradient?: boolean;
     className?: string;
 };
 
@@ -25,6 +27,7 @@ export default function TextGradient({
     toColor = "#e24c4a",
     angle = 90,
     link,
+    textStrokeGradient = false,
     className,
 }: TextGradientProps) {
     const style = {
@@ -33,7 +36,13 @@ export default function TextGradient({
         "--tg-angle": `${angle}deg`,
     } as CSSProperties;
 
-    const classes = [styles.gradient, className].filter(Boolean).join(" ");
+    const classes = [
+        styles.gradient,
+        textStrokeGradient ? styles.strokeGradient : "",
+        className,
+    ]
+        .filter(Boolean)
+        .join(" ");
 
     let content: React.ReactNode = text;
 
@@ -56,7 +65,11 @@ export default function TextGradient({
     }
 
     return (
-        <Tag className={classes} style={style}>
+        <Tag
+            className={classes}
+            style={style}
+            {...(textStrokeGradient && { "data-text": text })}
+        >
             <span>{content}</span>
         </Tag>
     );

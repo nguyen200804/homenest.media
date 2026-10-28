@@ -12,6 +12,25 @@
     box-decoration-break: clone;
 }
 
+/* Chữ nền trong suốt, chỉ hiển thị viền gradient.
+   Độ dày viền nhìn thấy ≈ một nửa --tg-stroke-width (nửa trong bị lớp phủ che). */
+.strokeGradient {
+    position: relative;
+    display: inline-block;
+    -webkit-text-stroke: var(--tg-stroke-width, 0.03em) transparent;
+}
+
+.strokeGradient::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    background: none;
+    pointer-events: none;
+    -webkit-text-fill-color: var(--background, #fff);
+    -webkit-text-stroke: 0;
+}
+
+
 /* Khi chữ là đường dẫn: kế thừa gradient của thẻ cha */
 .link {
     color: inherit;

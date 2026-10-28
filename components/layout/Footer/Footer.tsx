@@ -14,7 +14,7 @@ import {
     WhatsAppIcon,
     YouTubeIcon,
 } from "@/components/ui/icons";
-import TextGradient from "@/components/ui/TextGradient";
+import { TextGradient } from "@/components/ui/Text";
 import { cn } from "@/utils/cn";
 
 /* ------------------------------ Dữ liệu ------------------------------ */

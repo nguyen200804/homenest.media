@@ -33,6 +33,7 @@ h5,
 h6 {
   font-weight: 600;
   line-height: 1.25em;
+  letter-spacing: -0.04em;
 }
 
 html {

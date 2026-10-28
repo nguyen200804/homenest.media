@@ -169,7 +169,7 @@
 
 /* Start - Service Section */
 .serviceSection {
-    padding: 72px 0;
+    padding: 100px 0;
 }
 
 .serviceWrapper {
@@ -252,3 +252,434 @@
 }
 
 /* End - Service Section */
+
+
+
+/* Start - Creation Section */
+.creationSection {
+    background-color: rgba(34, 187, 92, 0);
+}
+
+.creationWrapper {
+    display: flex;
+    gap: 50px;
+}
+
+.creationMedia {
+    width: 44%;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.creationMediaImage {
+    background-color: rgba(246, 201, 38, 0);
+}
+
+.creationPanel {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 50px 72px;
+    gap: 50px;
+
+}
+
+.creationPanelImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+.creationStat {
+    background-color: rgba(190, 96, 12, 0);
+    color: #fff;
+}
+
+.creationStatNumber {
+    font-size: 90px;
+    text-align: right;
+    font-weight: 700;
+    line-height: 1em;
+}
+
+.creationStatLabel {
+    background-color: rgba(228, 38, 101, 0);
+    font-weight: 500;
+}
+
+.creationContent {
+    width: 56%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f2f4;
+    justify-content: center;
+    padding: 50px 120px 50px 120px;
+    box-sizing: border-box;
+    gap: 32px;
+    border-radius: 28px;
+}
+
+.creationLogo {
+    width: 90%;
+}
+
+.creationTitle {
+    font-size: 48px;
+}
+
+.creationDescription {
+    background-color: rgba(14, 119, 160, 0);
+}
+
+.creationDescriptionText {
+    margin-bottom: 1em;
+}
+
+/* End - Creation Section */
+
+
+
+/* Start - Brand Story Section */
+.brandStorySection {
+    padding: 100px 0;
+}
+
+.brandStoryWrapper {
+    display: flex;
+    gap: 50px;
+}
+
+.brandStoryContent {
+    width: 52%;
+}
+
+.brandStoryIntro {
+    background-color: rgba(236, 120, 53, 0);
+}
+
+.brandStoryTitle {
+    font-size: 48px;
+}
+
+.brandStoryDivider {
+    margin: 24px 0;
+}
+
+.brandStoryText {
+    background-color: rgba(213, 85, 22, 0);
+}
+
+.brandStorySlogan {
+    background-color: rgba(18, 145, 199, 0);
+}
+
+.brandStoryList {
+    margin-top: 60px;
+}
+
+.brandStoryItem {
+    position: relative;
+    padding-left: 140px;
+}
+
+.brandStoryItem:not(:first-child) {
+    margin-top: 32px;
+}
+
+.brandStoryItemNumber {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 72px;
+    line-height: 0.8em;
+    font-weight: 800;
+}
+
+.brandStoryItemContent {
+    background-color: rgba(72, 117, 234, 0);
+}
+
+.brandStoryItemTitle {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.brandStoryItemText {
+    background-color: rgba(33, 227, 142, 0);
+}
+
+.brandStoryMedia {
+    width: 48%;
+}
+
+.brandStoryImage {
+    background-color: rgba(106, 74, 253, 0);
+}
+
+/* End - Brand Story Section */
+
+
+
+/* Start - Project Section */
+.projectSection {
+    background-color: #1f1f1f;
+    padding: 100px 0;
+}
+
+.projectHeader {
+    color: #fff;
+    text-align: center;
+    max-width: 960px;
+    margin: 0 auto 50px;
+}
+
+.projectTitle {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.projectDescription {
+    background-color: rgba(88, 61, 227, 0);
+}
+
+.projectWrapper {
+    background-color: rgba(172, 235, 54, 0);
+}
+
+.projectMarquee {
+    background-color: rgba(11, 129, 204, 0);
+    overflow: hidden;
+}
+
+.projectMarqueeTrack {
+    display: flex;
+    width: fit-content;
+    animation: marquee 30s linear infinite;
+}
+
+.projectMarqueeGroup {
+    aspect-ratio: 3 / 1.8;
+    grid-gap: 10px;
+    grid-template-areas: "project1 project1 project2"
+        "project3 project4 project4";
+    min-width: 800px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.projectMarqueeItem {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.projectMarqueeItem:nth-child(1) {
+    grid-area: project1;
+}
+
+.projectMarqueeItem:nth-child(2) {
+    grid-area: project2;
+}
+
+.projectMarqueeItem:nth-child(3) {
+    grid-area: project3;
+}
+
+.projectMarqueeItem:nth-child(4) {
+    grid-area: project4;
+}
+
+.projectMarqueeImage {
+    background-color: #401cf100;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+/* End - Project Section */
+
+
+
+/* Start - Team Section */
+.teamSection {
+    background-color: #8e38df00;
+    padding: 100px 0;
+}
+
+.teamSectionHeader {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.teamSectionTitle {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.teamSectionDescription {
+    background-color: rgba(75, 168, 252, 0);
+}
+
+.teamSectionCardImage {
+    background-color: rgba(209, 36, 143, 0);
+}
+
+.teamSectionMarquee {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    overflow: clip;
+}
+
+.teamSectionTickerWrapper {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    mask: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 14%, rgb(0, 0, 0) 87%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 14%, rgb(0, 0, 0) 87%, rgba(0, 0, 0, 0) 100%);
+    --transform: 50px;
+}
+
+.teamSectionTickerWrapper:nth-of-type(2) {
+    margin-top: calc(var(--transform) * -1);
+}
+
+.teamSectionTickerTrack {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+    height: 100%;
+    width: max-content;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Hàng 1 chạy một chiều */
+.teamSectionTickerTrackRow1,
+.teamSectionTickerTrackRow2 {
+    animation: teamSectionTickerScroll 60s linear infinite;
+}
+
+
+
+.teamSectionTickerTrack>li:nth-of-type(even) {
+    margin-top: var(--transform);
+}
+
+.teamSectionTickerTrack>li:nth-of-type(odd) {
+    margin-bottom: var(--transform);
+}
+
+.teamSectionCardPhoto {
+    flex: 0 0 auto;
+    width: 168px;
+    height: 216px;
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+
+.teamSectionCardPhoto::before,
+.teamSectionCardQuote::before {
+    content: unset;
+}
+
+.teamSectionCardPhoto img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.teamSectionCardQuote {
+    flex: 0 0 auto;
+    width: 168px;
+    height: 216px;
+    border-radius: 16px;
+    background: linear-gradient(262deg, #E24C4A 0%, #386BB7 100%);
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.teamSectionCardQuoteText {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+}
+
+@keyframes teamSectionTickerScroll {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@media (max-width: 996px) {
+
+    .teamSectionCardPhoto,
+    .teamSectionCardQuote {
+        width: 140px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .teamSectionCardPhoto,
+    .teamSectionCardQuote {
+        width: 120px;
+        height: 160px;
+    }
+
+    .teamSectionCardQuoteText {
+        font-size: 11px;
+    }
+
+    .teamSectionMarquee,
+    .teamSectionTickerTrack {
+        gap: 12px;
+    }
+}
+
+/* End - Team Section */
