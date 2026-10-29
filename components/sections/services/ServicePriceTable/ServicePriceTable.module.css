@@ -1,0 +1,77 @@
+/* Start - Service Price Table Section */
+.servicePriceTable {
+    background-color: rgba(78, 142, 237, 0);
+}
+
+.servicePriceTableWrapper {
+    background-color: rgba(215, 84, 160, 0);
+}
+
+.servicePriceTableHeader {
+    background-color: rgba(45, 198, 126, 0);
+}
+
+.servicePriceTableTitle {
+    background-color: rgba(240, 128, 48, 0);
+}
+
+.servicePriceTableContent {
+    background-color: rgba(132, 94, 247, 0);
+}
+
+.servicePriceTableList {
+    background-color: rgba(18, 175, 236, 0);
+}
+
+.servicePriceTableCard {
+    background-color: rgba(255, 107, 107, 0);
+}
+
+.servicePriceTableCardHeader {
+    background-color: rgba(32, 201, 151, 0);
+}
+
+.servicePriceTableCardTitle {
+    background-color: rgba(250, 176, 5, 0);
+}
+
+.servicePriceTableCardDesc {
+    background-color: rgba(116, 143, 252, 0);
+}
+
+.servicePriceTableCardDivider {
+    background-color: rgba(247, 131, 172, 0);
+}
+
+.servicePriceTableFeatureList {
+    background-color: rgba(56, 217, 169, 0);
+}
+
+.servicePriceTableFeatureItem {
+    background-color: rgba(255, 146, 43, 0);
+}
+
+.servicePriceTableCardNote {
+    background-color: rgba(186, 104, 200, 0);
+}
+
+.servicePriceTableCardFooter {
+    background-color: rgba(77, 171, 247, 0);
+}
+
+.servicePriceTablePhoneBtn {
+    background-color: rgba(235, 87, 87, 0);
+}
+
+.servicePriceTablePriceInfo {
+    background-color: rgba(46, 204, 113, 0);
+}
+
+.servicePriceTablePriceNumber {
+    background-color: rgba(155, 89, 182, 0);
+}
+
+.servicePriceTablePriceText {
+    background-color: rgba(241, 196, 15, 0);
+}
+/* End - Service Price Table Section */

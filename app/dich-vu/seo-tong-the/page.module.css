@@ -1,0 +1,53 @@
+/* Start - SEO Intro Section */
+.seoIntro {
+    background-color: rgba(83, 162, 237, 0);
+}
+
+.seoIntroWrapper {
+    background-color: rgba(214, 78, 142, 0);
+}
+
+.seoIntroHeader {
+    background-color: rgba(37, 199, 112, 0);
+}
+
+.seoIntroTitle {
+    background-color: rgba(245, 133, 41, 0);
+}
+
+.seoIntroBrand {
+    background-color: rgba(168, 85, 247, 0);
+}
+
+.seoIntroLogo {
+    background-color: rgba(236, 72, 153, 0);
+}
+
+.seoIntroContent {
+    background-color: rgba(14, 165, 233, 0);
+}
+
+.seoIntroColLeft {
+    background-color: rgba(34, 197, 94, 0);
+}
+
+.seoIntroImageMain {
+    background-color: rgba(249, 115, 22, 0);
+}
+
+.seoIntroDescription {
+    background-color: rgba(99, 102, 241, 0);
+}
+
+.seoIntroButton {
+    background-color: rgba(239, 68, 68, 0);
+}
+
+.seoIntroColRight {
+    background-color: rgba(16, 185, 129, 0);
+}
+
+.seoIntroImageSecondary {
+    background-color: rgba(139, 92, 246, 0);
+}
+/* End - SEO Intro Section */

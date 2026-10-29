@@ -5,7 +5,7 @@ import { ManropeText, TextGradient } from "@/components/ui/Text";
 import { PROJECTS } from "@/constants/projects";
 import { TEAM_ITEMS } from "@/constants/team";
 import { LIST_TESTIMONIAL } from "@/constants/testimonial";
-import FAQSection from "@/components/sections/FAQSection";
+import { FAQSection } from "@/components/sections";
 import { Star } from "@/components/ui/icons";
 import { PARTNER } from "@/constants/partner";
 import { BLOG_LIST } from "@/constants/blog";

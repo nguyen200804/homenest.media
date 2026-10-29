@@ -6,3 +6,6 @@ export type { ServiceOverviewProps } from "./ServiceOverview";
 
 export { default as ServiceStrategy } from "./ServiceStrategy";
 export type { ServiceStrategyProps } from "./ServiceStrategy";
+
+export { default as ServicePriceTable } from "./ServicePriceTable";
+export type { ServicePriceTableProps } from "./ServicePriceTable";
