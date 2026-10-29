@@ -4,13 +4,13 @@
     display: inline-block;
     overflow: hidden;
     position: relative;
-    background-color: #181818;
+    background-color: #181818 !important;
     border-radius: 50%;
     transition: background-color .3s;
 }
 
 .buttonBottomRight:hover {
-    background-color: #F14F44;
+    background-color: #F14F44 !important;
 
 }
 

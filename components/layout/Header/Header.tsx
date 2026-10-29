@@ -26,8 +26,8 @@ function ChevronIcon({ className }: { className?: string }) {
 
 function Logo() {
   return (
-    <Link href="/" className={styles.logo} aria-label="HomeNest Media - Trang chủ">
-      <Image src="/images/logo/logo_homenest.media.png" alt="HomeNest Media - Trang chủ" width={250} height={66} />
+    <Link href="/" className={styles.logo} aria-label="HomeNest.media - Trang chủ">
+      <Image src="/images/logo/logo_HomeNest.media.png" alt="HomeNest.media - Trang chủ" width={250} height={66} />
     </Link>
   );
 }
@@ -64,13 +64,13 @@ export default function Header() {
             <a className={styles.topbarItem} href="tel:0898994298" id="topbar-hotline">
               <span className={styles.topbarLabel}>Hotline</span> 0898994298
             </a>
-            <a className={styles.topbarItem} href="mailto:info@homenest.media" id="topbar-email">
-              <span className={styles.topbarLabel}>Email</span> info@homenest.media
+            <a className={styles.topbarItem} href="mailto:info@HomeNest.media" id="topbar-email">
+              <span className={styles.topbarLabel}>Email</span> info@HomeNest.media
             </a>
             <span className={cn(styles.topbarItem, styles.hideMd)} id="topbar-address">
               <span className={styles.topbarLabel}>Địa chỉ:</span> SAV4 The Sun Avenue, 28 Mai Chí Thọ, P Bình Trưng, Tp HCM
             </span>
-            <span className={cn(styles.topbarItem, styles.topbarBrand)}>Homenest Media</span>
+            <span className={cn(styles.topbarItem, styles.topbarBrand)}>HomeNest.media</span>
           </div>
         </div>
 

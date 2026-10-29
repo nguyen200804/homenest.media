@@ -45,6 +45,13 @@ p {
   font-weight: 400;
 }
 
+a {
+  background-image: linear-gradient(262deg, #E24C4A 0%, #386BB7 100%);
+  -webkit-background-clip: text;
+  text-decoration: none;
+  color: transparent;
+}
+
 /* Container & breakpoints  see README: "Quy d?nh Breakpoint (Responsive)" */
 .container {
   max-width: 1400px;
@@ -62,6 +69,11 @@ p {
 @media (min-width: 2000px) {
   .container {
     max-width: 1600px;
+  }
+
+  html {
+
+    font-size: 18px;
   }
 }
 

@@ -15,6 +15,7 @@ export {
 } from "./ContactIcons";
 export { RocketIcon } from "./RocketIcon";
 export { default as Star } from "./Star";
+export { default as Thunder } from "./Thunder";
 export {
     default as ChevronRight,
     ChevronDown,

@@ -1,0 +1,72 @@
+.button {
+    border-radius: 100px;
+    padding: .8em 1.6em;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) scale(2) rotate(0deg);
+    background-image: linear-gradient(to right,
+            #386bb7 25%,
+            #e24c4a 75%);
+    z-index: -1;
+    width: 100%;
+    aspect-ratio: 1;
+    transition: transform .3s ease;
+}
+
+.button:hover::after {
+    transform: translateY(-50%) scale(2) rotate(-180deg);
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.button .text {
+    color: #fff;
+}
+
+.iconLeft {
+    padding-right: 0.5em;
+    width: 0.8em;
+    overflow: hidden;
+    box-sizing: content-box;
+    transition: padding-right .3s ease, width .3s ease;
+}
+
+.button svg {
+    fill: #fff;
+}
+
+.iconRight {
+    padding-left: 0em;
+    width: 0em;
+    overflow: hidden;
+    box-sizing: content-box;
+    transition: padding-left .3s ease, width .3s ease;
+}
+
+.inner svg {
+    width: 100%;
+}
+
+.button:hover .iconLeft {
+    padding-right: 0em;
+    width: 0em;
+}
+
+.button:hover .iconRight {
+    padding-left: .5em;
+    width: 0.8em;
+}

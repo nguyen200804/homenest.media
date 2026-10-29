@@ -450,18 +450,38 @@
 }
 
 .projectWrapper {
-    background-color: rgba(172, 235, 54, 0);
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
 }
 
-.projectMarquee {
-    background-color: rgba(11, 129, 204, 0);
-    overflow: hidden;
+.projectWrapper::before,
+.projectWrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    z-index: 1;
+}
+
+.projectWrapper::before {
+    background-image: linear-gradient(to right, #000f, #0000);
+}
+
+.projectWrapper::after {
+    background-image: linear-gradient(to left, #000f, #0000);
+    right: 0;
 }
 
 .projectMarqueeTrack {
     display: flex;
     width: fit-content;
     animation: marquee 30s linear infinite;
+}
+
+.projectMarquee:hover .projectMarqueeTrack {
+    animation-play-state: paused;
 }
 
 .projectMarqueeGroup {
@@ -765,7 +785,7 @@
 }
 
 .accompanyMarqueeLine:last-child .accompanyMarqueeItem {
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #000000 !important;
 }
 
 .accompanyMarqueeItemWide {
@@ -921,6 +941,8 @@
 /* Start - Blog Section */
 .blogSection {
     padding: 100px 0;
+    position: relative;
+    z-index: 0;
 }
 
 .blogWrapper {
@@ -928,6 +950,57 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 50px 0px;
+}
+
+/* Marquee text: chữ chạy ngang vô hạn, dừng khi hover */
+.blogMarqueeText {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: -100px;
+    z-index: -1;
+}
+
+.blogMarqueeTrack {
+    display: flex;
+    width: fit-content;
+    animation: marquee 80s linear infinite;
+}
+
+.blogMarqueeGroup {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.blogMarqueeItem {
+    letter-spacing: -.04em;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #0000;
+    flex-shrink: 0;
+    align-items: center;
+    font-size: 200px;
+    font-weight: 700;
+    line-height: 1.2;
+    display: inline-flex;
+    background: linear-gradient(rgba(230, 230, 230, 0.8), rgba(255, 255, 255, 0)) text;
+}
+
+/* Dấu phân cách giữa các cụm chữ */
+.blogMarqueeItem::after {
+    content: "";
+    background-color: #e6e6e6cc;
+    border-radius: 50%;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    margin: 0 48px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .blogMarqueeTrack {
+        animation: none;
+    }
 }
 
 .blogTitle {
@@ -972,11 +1045,12 @@
 }
 
 .blogCardMeta {
-    display: flex;
-    gap: 16px;
+    opacity: .5;
     align-self: flex-end;
     align-items: center;
-    opacity: 0.5;
+    gap: 16px;
+    display: flex;
+    margin-top: 14px;
 }
 
 .blogCardAuthor {

@@ -33,7 +33,6 @@ ul.hn-footer__brands-list {
 }
 
 .hn-footer__container * {
-    color: #000;
     margin-top: unset;
 }
 
@@ -151,7 +150,6 @@ a.hn-footer__value {
 }
 
 a.hn-footer__value.linked {
-    font-weight: 500;
     text-decoration: underline;
 }
 

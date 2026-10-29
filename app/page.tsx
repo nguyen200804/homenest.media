@@ -70,6 +70,13 @@ const PARTNER_LOGOS = PARTNER.filter(
 const getPartnerName = (urlImage: string) =>
   (urlImage.split("/").pop() ?? "").replace(/\.\w+$/, "").replace(/-/g, " ");
 
+/** Nội dung chữ chạy (marquee) ở đầu khối Blog. */
+const BLOG_MARQUEE_TEXT = "Not just service, we accompany your development";
+/** Số lần lặp chữ trong mỗi nhóm, đủ dài để phủ kín chiều rộng màn hình. */
+const BLOG_MARQUEE_REPEAT = 3;
+/** Số nhóm render (bản gốc + bản sao) để animation (0 → -50%) lặp liền mạch. */
+const DUPLICATE_BLOG_MARQUEE = 2;
+
 export default function Home() {
   return (
     <>
@@ -92,7 +99,7 @@ export default function Home() {
                 />
                 <h2 className={styles.heroIntroTitle}>Đối tác đáng tin cậy</h2>
                 <p className={styles.heroIntroText}>
-                  “HomeNest Media là đối tác tin cậy, cung cấp các giải pháp marketing và truyền thông toàn diện để giúp doanh nghiệp của bạn phát triển bền vững. Từ Digital Marketing, Branding, Thiết kế logo, Sáng tạo Video, đến Tổ chức sự kiện và Quảng cáo ngoài trời, chúng tôi đồng hành cùng bạn trên mọi bước đường.”
+                  “HomeNest.media là đối tác tin cậy, cung cấp các giải pháp marketing và truyền thông toàn diện để giúp doanh nghiệp của bạn phát triển bền vững. Từ Digital Marketing, Branding, Thiết kế logo, Sáng tạo Video, đến Tổ chức sự kiện và Quảng cáo ngoài trời, chúng tôi đồng hành cùng bạn trên mọi bước đường.”
                 </p>
                 <div className={styles.heroButton}>
                   <ButtonBottomRight
@@ -209,7 +216,7 @@ export default function Home() {
               <Image
                 className={styles.creationMediaImage}
                 src="/images/creation/Creation_1.webp"
-                alt="Logo Homenest Media"
+                alt="Logo HomeNest.media"
                 width={2483}
                 height={2560}
               />
@@ -217,7 +224,7 @@ export default function Home() {
                 <Image
                   className={styles.creationPanelImage}
                   src="/images/hero_section/hero_banner_2.webp"
-                  alt="Logo Homenest Media"
+                  alt="Logo HomeNest.media"
                   width={1570}
                   height={1707}
                 />
@@ -235,7 +242,7 @@ export default function Home() {
               <Image
                 className={styles.creationLogo}
                 src="/images/logo/logo-big_homenest-media.webp"
-                alt="Logo Homenest Media"
+                alt="Logo HomeNest.media"
                 width={2560}
                 height={681}
               />
@@ -274,7 +281,7 @@ export default function Home() {
                     className={styles.brandStorySlogan}
                     tagHTML="strong"
                     text="Not just service, we accompany your development”"
-                  /> không chỉ là slogan, mà còn là cam kết của Homenest Media với khách hàng. Đây là triết lý kinh doanh của HomeNest.media – nơi mà khách hàng không chỉ nhận được dịch vụ chất lượng mà còn có một đối tác tin cậy, sẵn sàng hỗ trợ khách hàng trong mọi giai đoạn phát triển.
+                  /> không chỉ là slogan, mà còn là cam kết của HomeNest.media với khách hàng. Đây là triết lý kinh doanh của HomeNest.media – nơi mà khách hàng không chỉ nhận được dịch vụ chất lượng mà còn có một đối tác tin cậy, sẵn sàng hỗ trợ khách hàng trong mọi giai đoạn phát triển.
                 </p>
               </header>
 
@@ -302,7 +309,7 @@ export default function Home() {
                     <h3 className={styles.brandStoryItemTitle}>
                       <TextGradient text="Sứ mệnh" />
                     </h3>
-                    <p className={styles.brandStoryItemText}>Vì sự phát triển của thương hiệu Việt, HomeNest.Media được thành lập nhằm giúp các doanh nghiệp nâng cao lợi thế cạnh tranh thông qua việc xây dựng thương hiệu mạnh mẽ.</p>
+                    <p className={styles.brandStoryItemText}>Vì sự phát triển của thương hiệu Việt, HomeNest.media được thành lập nhằm giúp các doanh nghiệp nâng cao lợi thế cạnh tranh thông qua việc xây dựng thương hiệu mạnh mẽ.</p>
                   </div>
                 </li>
                 <li className={styles.brandStoryItem}>
@@ -463,7 +470,7 @@ export default function Home() {
             <Image
               className={styles.accompanyQuoteSignature}
               src="/images/chu_ky.svg"
-              alt="Chữ ký Co-Founder Homenest Media"
+              alt="Chữ ký Co-Founder HomeNest.media"
               width={288}
               height={122}
             />
@@ -519,7 +526,7 @@ export default function Home() {
         <div className="container">
           <div className={styles.testimonialWrapper}>
             <header className={styles.testimonialHeader}>
-              <h2 className={styles.testimonialTitle}>Khách hàng nói gì về <TextGradient text="HomeNest.Media" /></h2>
+              <h2 className={styles.testimonialTitle}>Khách hàng nói gì về <TextGradient text="HomeNest.media" /></h2>
               <div className={styles.testimonialRating} role="img" aria-label="Đánh giá 5 trên 5 sao">
                 {Array.from({ length: 5 }).map((_, starIndex) => (
                   <Star key={starIndex} />
@@ -549,7 +556,7 @@ export default function Home() {
 
 
 
-      <section className={styles.partnerSection} aria-label="Đối tác của HomeNest Media">
+      <section className={styles.partnerSection} aria-label="Đối tác của HomeNest.media">
         <div className={styles.partnerMarquee}>
           <div className={styles.partnerMarqueeTrack}>
             {Array.from({ length: DUPLICATE_PARTNER }).map((_, copyIndex) => {
@@ -593,8 +600,32 @@ export default function Home() {
 
       <section className={styles.blogSection}>
 
+        <div className={styles.blogMarqueeText}>
+          <div className={styles.blogMarqueeTrack}>
+            {Array.from({ length: DUPLICATE_BLOG_MARQUEE }).map((_, copyIndex) => {
+              /** Bản sao: ẩn khỏi screen reader. */
+              const isClone = copyIndex > 0;
+
+              return (
+                <div
+                  key={copyIndex}
+                  className={styles.blogMarqueeGroup}
+                  aria-hidden={isClone || undefined}
+                >
+                  {Array.from({ length: BLOG_MARQUEE_REPEAT }).map((_, itemIndex) => (
+                    <span key={itemIndex} className={styles.blogMarqueeItem}>
+                      {BLOG_MARQUEE_TEXT}
+                    </span>
+                  ))}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
         <div className="fullWidth">
           <div className={styles.blogWrapper}>
+
             <h2 className={styles.blogTitle}><TextGradient text="Tin tức" /> và <TextGradient text="xu hướng" /> <br />mới nhất</h2>
             <p className={styles.blogDescription}>Tìm hiểu về những phát triển thú vị và xu hướng nổi bật của tương lai tương lai trong và ngoài nước.</p>
 

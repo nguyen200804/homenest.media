@@ -9,7 +9,7 @@ export const LIST_TESTIMONIAL: TestimonialItem[] = [
     {
         name: "Nguyễn Minh Anh",
         star: 5,
-        content: "HomeNest Media làm việc rất chuyên nghiệp, mọi công đoạn đều rất chỉnh chu.",
+        content: "HomeNest.media làm việc rất chuyên nghiệp, mọi công đoạn đều rất chỉnh chu.",
     },
     {
         name: "Võ Thành Đạt",
@@ -25,12 +25,12 @@ export const LIST_TESTIMONIAL: TestimonialItem[] = [
     {
         name: "Trần Quốc Bảo",
         star: 5,
-        content: "HomeNest Media tư vấn hỗ trợ rất chu đáo, làm việc rất chuyên nghiệp và nhanh chóng.",
+        content: "HomeNest.media tư vấn hỗ trợ rất chu đáo, làm việc rất chuyên nghiệp và nhanh chóng.",
     },
     {
         name: "Nguyễn Thu Trang",
         star: 5,
-        content: "Làm việc rất chuyên nghiệp và nhanh chóng, tôi rất hài lòng về quá trình làm việc cùng HomeNest Media",
+        content: "Làm việc rất chuyên nghiệp và nhanh chóng, tôi rất hài lòng về quá trình làm việc cùng HomeNest.media",
     },
     {
         name: "Đặng Gia Hân",

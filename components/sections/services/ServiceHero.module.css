@@ -1,0 +1,146 @@
+/* Start - Service Hero Section */
+.serviceHero {
+    padding: 100px 0;
+    background: #f0f2f4;
+}
+
+.serviceHeroWrapper {
+    display: flex;
+    gap: 80px;
+}
+
+.serviceHeroHeader {
+    width: 60%;
+}
+
+.serviceHeroHeading {
+    background: linear-gradient(to right, var(--hn-color-1), var(--hn-color-2), var(--hn-color-3), var(--hn-color-4), var(--hn-color-5));
+    -webkit-text-fill-color: transparent;
+    color: #0000;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: 4s linear infinite alternate hn-gradient-change;
+    font-size: 60px;
+}
+
+
+
+
+/* Start custom CSS for html, class: .elementor-element-0ba215a */
+@property --hn-color-1 {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #e64b48;
+    /* Tươi hơn từ #c53e3c */
+}
+
+@property --hn-color-2 {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #2463ff;
+    /* Tươi hơn từ #1955ad */
+}
+
+@property --hn-color-3 {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #ff7a1a;
+    /* Tươi hơn từ #f26513 */
+}
+
+@property --hn-color-4 {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #5bb9ff;
+    /* Tươi hơn từ #4a99f4 */
+}
+
+@property --hn-color-5 {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #ff2831;
+    /* Tươi hơn từ #bc0b15 */
+}
+
+@keyframes hn-gradient-change {
+    0% {
+        --hn-color-1: #e64b48;
+        --hn-color-2: #2463ff;
+        --hn-color-3: #ff7a1a;
+        --hn-color-4: #5bb9ff;
+        --hn-color-5: #ff2831;
+    }
+
+    25% {
+        --hn-color-1: #2463ff;
+        --hn-color-2: #ff7a1a;
+        --hn-color-3: #5bb9ff;
+        --hn-color-4: #ff2831;
+        --hn-color-5: #e64b48;
+    }
+
+    50% {
+        --hn-color-1: #ff7a1a;
+        --hn-color-2: #5bb9ff;
+        --hn-color-3: #ff2831;
+        --hn-color-4: #e64b48;
+        --hn-color-5: #2463ff;
+    }
+
+    75% {
+        --hn-color-1: #5bb9ff;
+        --hn-color-2: #ff2831;
+        --hn-color-3: #e64b48;
+        --hn-color-4: #2463ff;
+        --hn-color-5: #ff7a1a;
+    }
+
+    100% {
+        --hn-color-1: #ff2831;
+        --hn-color-2: #e64b48;
+        --hn-color-3: #2463ff;
+        --hn-color-4: #ff7a1a;
+        --hn-color-5: #5bb9ff;
+    }
+}
+
+.serviceHeroContent {
+    width: 40%;
+}
+
+.serviceHeroDescription {
+    background-color: rgba(58, 134, 255, 0);
+}
+
+.serviceHeroDescription p,
+.serviceHeroDescription ul,
+.serviceHeroDescription ol {
+    margin-bottom: 1em;
+}
+
+/* Tailwind preflight reset list-style + padding nên phải khai báo lại để hiện dấu chấm / số */
+.serviceHeroDescription ul,
+.serviceHeroDescription ol {
+    padding-left: 1.5em;
+    list-style-position: outside;
+}
+
+.serviceHeroDescription ul {
+    list-style-type: disc;
+}
+
+.serviceHeroDescription ol {
+    list-style-type: decimal;
+}
+
+.serviceHeroDescription li {
+    display: list-item;
+    margin-bottom: 0em;
+}
+
+.serviceHeroAction {
+    margin-top: 50px;
+}
+
+/* End - Service Hero Section */

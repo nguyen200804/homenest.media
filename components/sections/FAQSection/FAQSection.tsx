@@ -111,13 +111,13 @@ const DEFAULT_FAQS: TFAQItem[] = [
                 <ul>
                     <li>
                         <strong>Website</strong>:{' '}
-                        <a href="https://homenest.media/" target="_blank" rel="noopener noreferrer">
-                            https://homenest.media
+                        <a href="https://HomeNest.media/" target="_blank" rel="noopener noreferrer">
+                            https://HomeNest.media
                         </a>
                     </li>
                     <li>
                         <strong>Email</strong>:{' '}
-                        <a href="mailto:info@homenest.media">info@homenest.media</a>
+                        <a href="mailto:info@HomeNest.media">info@HomeNest.media</a>
                     </li>
                     <li>
                         <strong>Hotline</strong>:{' '}

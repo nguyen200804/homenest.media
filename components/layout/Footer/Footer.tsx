@@ -39,8 +39,8 @@ const CONTACTS = [
     {
         key: "website",
         label: "Website",
-        text: "homenest.com.vn",
-        href: "https://homenest.com.vn",
+        text: "HomeNest.media",
+        href: "https://HomeNest.media",
         linked: true,
         external: true,
     },
@@ -76,7 +76,7 @@ const ADDRESSES = [
 const BRANDS = [
     { alt: "HomeNest.com.vn", href: "https://homenest.com.vn", src: "/images/logo/logo_homenest.com.vn.png", modifier: "com.vn" },
     { alt: "HomeNest.software", href: "https://homenest.software", src: "/images/logo/logo_homenest.software.png", modifier: "software" },
-    { alt: "HomeNest.media", href: "https://homenest.media", src: "/images/logo/logo_homenest.media.png", modifier: "media" },
+    { alt: "HomeNest.media", href: "https://HomeNest.media", src: "/images/logo/logo_HomeNest.media.png", modifier: "media" },
     { alt: "HomeNest.tech", href: "https://homenest.tech", src: "/images/logo/logo_homenest.tech.png", modifier: "tech" },
 ];
 
@@ -108,7 +108,7 @@ export default function Footer() {
                                 <Link href="/" className={styles["hn-footer__logo"]}>
                                     <Image
                                         className={styles["hn-footer__logo-img"]}
-                                        src="/images/logo/logo_homenest.media.png"
+                                        src="/images/logo/logo_HomeNest.media.png"
                                         alt="HomeNest Tech"
                                         width={200}
                                         height={60}
