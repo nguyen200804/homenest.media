@@ -4,16 +4,44 @@
     padding: 100px 0;
 }
 
-.faqWrapper {
-    background-color: rgba(219, 74, 156, 0);
+.faqItemHeader {
+    margin: 0;
+}
+
+.faqButton {
+    width: 100%;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    background: none;
+    border: 0;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    display: flex;
 }
 
 .faqHeader {
-    background-color: rgba(45, 212, 112, 0);
+    width: 70%;
+    margin-left: auto;
+    padding-bottom: 50px;
 }
 
 .faqTitle {
     font-size: 48px;
+}
+
+.faqToggle {
+    flex-shrink: 0;
+    width: 24px;
+    display: inline-block;
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+
+.faqItemOpen .faqToggle {
+    transform: rotate(180deg);
 }
 
 .faqContent {
@@ -26,14 +54,20 @@
 
 .faqItem {
     display: flex;
+    border-bottom: 1px solid #000;
 }
 
 .faqIndex {
     width: 30%;
+    display: flex;
+    align-items: center;
+    height: 100px;
 }
 
 .faqIndexNumber {
-    background-color: rgba(255, 198, 41, 0);
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -0.03em;
 }
 
 .faqItemContent {
@@ -44,8 +78,60 @@
     font-size: 28px;
 }
 
+/* Accordion: animate chiều cao bằng grid-template-rows (0fr -> 1fr) */
+.faqAnswerWrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition: grid-template-rows 0.35s ease, opacity 0.35s ease;
+}
+
+.faqItemOpen .faqAnswerWrapper {
+    grid-template-rows: 1fr;
+    opacity: 1;
+}
+
+.faqAnswerInner {
+    overflow: hidden;
+    min-height: 0;
+}
+
 .faqAnswer {
-    background-color: rgba(46, 204, 184, 0);
+    padding-bottom: 40px;
+}
+
+.faqAnswer p,
+.faqAnswer ul,
+.faqAnswer ol {
+    margin-bottom: 1em;
+}
+
+/* Tailwind preflight reset list-style + padding nên phải khai báo lại để hiện dấu chấm / số */
+.faqAnswer ul,
+.faqAnswer ol {
+    padding-left: 1.5em;
+    list-style-position: outside;
+}
+
+.faqAnswer ul {
+    list-style-type: disc;
+}
+
+.faqAnswer ol {
+    list-style-type: decimal;
+}
+
+.faqAnswer li {
+    display: list-item;
+    margin-bottom: 0em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .faqToggle,
+    .faqAnswerWrapper {
+        transition: none;
+    }
 }
 
 /* End - FAQ Section */

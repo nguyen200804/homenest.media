@@ -1,12 +1,15 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { ButtonBottomRight } from "@/components/ui/Buttons";
+import { ButtonBottomRight, ButtonTransparentToGradient } from "@/components/ui/Buttons";
 import { ManropeText, TextGradient } from "@/components/ui/Text";
 import { PROJECTS } from "@/constants/projects";
 import { TEAM_ITEMS } from "@/constants/team";
 import { LIST_TESTIMONIAL } from "@/constants/testimonial";
 import FAQSection from "@/components/sections/FAQSection";
 import { Star } from "@/components/ui/icons";
+import { PARTNER } from "@/constants/partner";
+import { BLOG_LIST } from "@/constants/blog";
+import Tag from "@/components/ui/Tag";
 
 /** Số dự án mỗi nhóm trong marquee. */
 const PROJECT_GROUP_SIZE = 4;
@@ -44,6 +47,28 @@ const TEAM_ROWS = [
     trackClassName: styles.teamSectionTickerTrackRow2,
   },
 ];
+
+/** Kích thước gốc của logo đối tác (px): logo vuông 248×248, logo chữ nhật 492×248. */
+const PARTNER_LOGO_HEIGHT = 248;
+const PARTNER_LOGO_UNIT_WIDTH = 248;
+
+/** Số lần danh sách logo đối tác được render (bản gốc + bản sao) để marquee chạy vòng lặp liền mạch. */
+const DUPLICATE_PARTNER = 2;
+
+/** Chia logo đối tác theo dòng (1, 2, 3). */
+const PARTNER_LINES = ([1, 2, 3] as const).map((line) =>
+  PARTNER.filter((partner) => partner.line === line),
+);
+
+/** Danh sách logo đối tác không trùng (dùng cho marquee 1 hàng). */
+const PARTNER_LOGOS = PARTNER.filter(
+  (partner, index) =>
+    PARTNER.findIndex((item) => item.urlImage === partner.urlImage) === index,
+);
+
+/** Tạo alt từ tên file logo: "/images/thuong-hieu/the-oak.webp" → "the oak". */
+const getPartnerName = (urlImage: string) =>
+  (urlImage.split("/").pop() ?? "").replace(/\.\w+$/, "").replace(/-/g, " ");
 
 export default function Home() {
   return (
@@ -416,6 +441,80 @@ export default function Home() {
 
 
 
+
+      <section className={styles.accompanySection}>
+        {/* hình con bò xám bên trái */}
+        <div className={styles.accompanyDecor}>
+          <Image
+            className={styles.accompanyDecorImage}
+            src="/images/dau-trau.webp"
+            alt=""
+            width={1484}
+            height={2560}
+            aria-hidden="true"
+          />
+        </div>
+
+        <div className={styles.accompanyQuote}>
+          <blockquote className={styles.accompanyQuoteText}>
+            <i><TextGradient text="Không chỉ dịch vụ - Homenest đồng hành" /> trên mọi lĩnh vực phát triển của bạn</i>
+          </blockquote>
+          <div className={styles.accompanyQuoteAuthor}>
+            <Image
+              className={styles.accompanyQuoteSignature}
+              src="/images/chu_ky.svg"
+              alt="Chữ ký Co-Founder Homenest Media"
+              width={288}
+              height={122}
+            />
+            <span className={styles.accompanyQuoteRole}>CO-FOUNDER</span>
+          </div>
+        </div>
+
+
+        <div className={styles.accompanyMarquee}>
+          <div className={styles.accompanyMarqueeWrapper}>
+            {/* Duplicate */}
+            {Array.from({ length: DUPLICATE_PARTNER }).map((_, copyIndex) => {
+              /** Bản sao: ẩn khỏi screen reader. */
+              const isClone = copyIndex > 0;
+
+              return (
+                <div
+                  key={copyIndex}
+                  className={styles.accompanyMarqueeGroup}
+                  aria-hidden={isClone || undefined}
+                >
+                  {PARTNER_LINES.map((partners, lineIndex) => (
+                    <div key={lineIndex} className={styles.accompanyMarqueeLine}>
+                      {partners.map((partner) => (
+                        <div
+                          key={partner.urlImage}
+                          className={`${styles.accompanyMarqueeItem} ${partner.width === 2
+                            ? styles.accompanyMarqueeItemWide
+                            : styles.accompanyMarqueeItemSquare
+                            }`}
+                        >
+                          <Image
+                            className={styles.accompanyMarqueeImage}
+                            src={partner.urlImage}
+                            alt={isClone ? "" : getPartnerName(partner.urlImage)}
+                            width={partner.width * PARTNER_LOGO_UNIT_WIDTH}
+                            height={PARTNER_LOGO_HEIGHT}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+
+
       <section className={styles.testimonialSection}>
         <div className="container">
           <div className={styles.testimonialWrapper}>
@@ -449,7 +548,82 @@ export default function Home() {
       </section>
 
 
+
+      <section className={styles.partnerSection} aria-label="Đối tác của HomeNest Media">
+        <div className={styles.partnerMarquee}>
+          <div className={styles.partnerMarqueeTrack}>
+            {Array.from({ length: DUPLICATE_PARTNER }).map((_, copyIndex) => {
+              /** Bản sao: ẩn khỏi screen reader. */
+              const isClone = copyIndex > 0;
+
+              return (
+                <ul
+                  key={copyIndex}
+                  className={styles.partnerMarqueeGroup}
+                  aria-hidden={isClone || undefined}
+                >
+                  {PARTNER_LOGOS.map((partner) => (
+                    <li
+                      key={partner.urlImage}
+                      className={`${styles.partnerMarqueeItem} ${partner.width === 2
+                        ? styles.partnerMarqueeItemWide
+                        : styles.partnerMarqueeItemSquare
+                        }`}
+                    >
+                      <Image
+                        className={styles.partnerMarqueeImage}
+                        src={partner.urlImage}
+                        alt={isClone ? "" : getPartnerName(partner.urlImage)}
+                        width={partner.width * PARTNER_LOGO_UNIT_WIDTH}
+                        height={PARTNER_LOGO_HEIGHT}
+                      />
+                    </li>
+                  ))}
+                </ul>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+
       <FAQSection />
+
+
+
+      <section className={styles.blogSection}>
+
+        <div className="fullWidth">
+          <div className={styles.blogWrapper}>
+            <h2 className={styles.blogTitle}><TextGradient text="Tin tức" /> và <TextGradient text="xu hướng" /> <br />mới nhất</h2>
+            <p className={styles.blogDescription}>Tìm hiểu về những phát triển thú vị và xu hướng nổi bật của tương lai tương lai trong và ngoài nước.</p>
+
+            <div className={styles.blogList}>
+              {BLOG_LIST.map((blog, index) => (
+
+                <article key={index} className={styles.blogCard}>
+                  <Tag className={styles.blogCardCategory} text={blog.category} />
+                  <h3 className={styles.blogCardTitle}>{blog.title}</h3>
+                  <p className={styles.blogCardText}>{blog.desc}</p>
+                  <div className={styles.blogCardMeta}>
+                    <p className={styles.blogCardAuthor}>{blog.author}</p>
+                    <span className={styles.blogCardDivider}></span>
+                    <p className={styles.blogCardDate}>{blog.date}</p>
+                  </div>
+                </article>
+
+
+              ))}
+            </div>
+
+            <div className={styles.blogButtonSeeMore}>
+              <ButtonTransparentToGradient text="Xem thêm" link="#" />
+            </div>
+
+          </div>
+
+        </div>
+      </section>
 
     </>
   );

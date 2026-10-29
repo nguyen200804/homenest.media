@@ -1,5 +1,5 @@
 import styles from './ButtonBottomRight.module.css';
-import ChevronRight from '../icons/ChevronRight';
+import ChevronRight from '../icons/Chevron';
 
 
 export interface ButtonBottomRightProps {

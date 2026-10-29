@@ -1,0 +1,130 @@
+.button {
+    border-radius: 100px;
+    padding: .8em 1.6em;
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    /* độ dày viền */
+    border-radius: inherit;
+    background: linear-gradient(var(--tg-angle, 90deg),
+            var(--tg-from, #386bb7),
+            var(--tg-to, #e24c4a));
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.button::after {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    background-image: linear-gradient(var(--tg-angle, 90deg),
+            var(--tg-from, #386bb7),
+            var(--tg-to, #e24c4a));
+    z-index: -1;
+    border-radius: 100px;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.button:hover::after {
+    opacity: 1;
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+}
+
+
+
+@property --tg-from {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #386bb7;
+}
+
+@property --tg-to {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #e24c4a;
+}
+
+@property --tg-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 90deg;
+}
+
+.button .text {
+    background-image: linear-gradient(var(--tg-angle),
+            var(--tg-from),
+            var(--tg-to));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    transition: --tg-from .3s ease, --tg-to .3s ease, --tg-angle .3s ease;
+}
+
+.button:hover .text {
+    --tg-from: #ffffff;
+    --tg-to: #ffffff;
+    --tg-angle: 90deg;
+}
+
+.iconLeft {
+    padding-right: 0.5em;
+    width: 0.8em;
+    overflow: hidden;
+    box-sizing: content-box;
+
+    transition: padding-right .3s ease, width .3s ease;
+}
+
+.iconLeft svg {
+    fill: #386bb7;
+    transition: fill .3s ease;
+}
+
+.iconRight svg {
+    fill: #e24c4a;
+    transition: fill .3s ease;
+}
+
+.button:hover svg {
+    fill: #fff;
+}
+
+.iconRight {
+    padding-left: 0em;
+    width: 0em;
+    overflow: hidden;
+    box-sizing: content-box;
+    transition: padding-left .3s ease, width .3s ease;
+}
+
+.inner svg {
+    width: 100%;
+}
+
+.button:hover .iconLeft {
+    padding-right: 0em;
+    width: 0em;
+}
+
+.button:hover .iconRight {
+    padding-left: .5em;
+    width: 0.8em;
+}

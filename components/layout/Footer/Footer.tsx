@@ -235,7 +235,7 @@ export default function Footer() {
 
                     <div className={styles["hn-footer__bottom"]}>
                         <p className={styles["hn-footer__copyright"]}>
-                            Copyright © 2023 QuestX. All Rights Reserved. Design by HomeNest
+                            Copyright © 2023 QuestX. All Rights Reserved. Design by HomeNest Software
                         </p>
                     </div>
                 </div>

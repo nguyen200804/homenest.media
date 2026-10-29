@@ -185,7 +185,7 @@
 }
 
 .serviceTitle {
-    font-size: 40px;
+    font-size: 48px;
 }
 
 .serviceStat {
@@ -684,9 +684,107 @@
 
 /* End - Team Section */
 
+/* Start - Accompany Section */
+.accompanySection {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.accompanyDecor {
+    width: 20%;
+}
+
+.accompanyDecorImage {
+    background-color: rgba(169, 169, 169, 0);
+}
+
+.accompanyQuote {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 72px;
+    padding-left: 100px;
+    padding-right: calc((100vw - 1415px) / 2);
+    padding-bottom: 40px;
+}
+
+.accompanyQuoteText {
+    font-size: 72px;
+    line-height: 1.2em;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.accompanyQuoteAuthor {
+    display: flex;
+    align-items: flex-end;
+    align-self: flex-end;
+    gap: 16px;
+    padding: 0px 24px 14px;
+    border-bottom: 1px solid #000;
+    opacity: 50%;
+}
+
+.accompanyQuoteSignature {
+    height: 92px;
+    width: auto;
+}
+
+.accompanyQuoteRole {
+    background-color: rgba(255, 20, 147, 0);
+}
+
+.accompanyMarquee {
+    width: 100%;
+    overflow: hidden;
+    margin-top: -40px;
+    position: relative;
+    z-index: -1;
+}
+
+.accompanyMarqueeWrapper {
+    width: fit-content;
+    display: flex;
+    animation: marquee 45s linear infinite;
+}
+
+.accompanyMarqueeGroup {
+    background-color: rgba(220, 20, 60, 0);
+}
+
+.accompanyMarqueeLine {
+    display: flex;
+}
+
+.accompanyMarqueeItem {
+    border: 1px solid #000;
+    height: 100px;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.accompanyMarqueeLine:last-child .accompanyMarqueeItem {
+    border-bottom: 1px solid #000000;
+}
+
+.accompanyMarqueeItemWide {
+    aspect-ratio: 2;
+}
+
+.accompanyMarqueeItemSquare {
+    aspect-ratio: 1;
+}
+
+.accompanyMarqueeImage {
+    background-color: rgba(205, 92, 92, 0);
+}
+
+/* End - Accompany Section */
+
 /* Start - Testimonial Section */
 .testimonialSection {
-    background-color: rgba(57, 201, 134, 0);
+    padding: 100px 0;
 }
 
 .testimonialSection svg {
@@ -768,3 +866,135 @@
 }
 
 /* End - Testimonial Section */
+
+
+
+
+/* Start - Partner Section */
+.partnerSection {
+    margin-bottom: 100px;
+    overflow: hidden;
+}
+
+.partnerMarquee {
+    overflow: hidden;
+}
+
+.partnerMarqueeTrack {
+    display: flex;
+    width: fit-content;
+    animation: marquee 90s linear infinite;
+}
+
+.partnerMarqueeTrack:hover {
+    animation-play-state: paused;
+}
+
+.partnerMarqueeGroup {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.partnerMarqueeItem {
+    height: 100px;
+    flex-shrink: 0;
+    margin-right: 40px;
+}
+
+.partnerMarqueeItemWide {
+    aspect-ratio: 2;
+}
+
+.partnerMarqueeItemSquare {
+    aspect-ratio: 1;
+}
+
+.partnerMarqueeImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* End - Partner Section */
+
+/* Start - Blog Section */
+.blogSection {
+    padding: 100px 0;
+}
+
+.blogWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px 0px;
+}
+
+.blogTitle {
+    font-size: 48px;
+}
+
+.blogDescription {
+    max-width: 500px;
+}
+
+.blogList {
+    display: flex;
+}
+
+.blogItem {
+    background-color: rgba(138, 43, 226, 0);
+}
+
+.blogCard {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.blogCard:not(:last-child) {
+    padding-right: 50px;
+    border-right: 1px solid #000;
+    margin-right: 50px;
+}
+
+.blogCardCategory {
+    background-color: rgba(220, 20, 60, 0);
+}
+
+.blogCardTitle {
+    font-size: 24px;
+}
+
+.blogCardText {
+    background-color: rgba(147, 112, 219, 0);
+    opacity: 0.5;
+}
+
+.blogCardMeta {
+    display: flex;
+    gap: 16px;
+    align-self: flex-end;
+    align-items: center;
+    opacity: 0.5;
+}
+
+.blogCardAuthor {
+    background-color: rgba(0, 191, 255, 0);
+}
+
+.blogCardDivider {
+    background-color: rgba(0, 0, 0);
+    width: 1px;
+    height: 80%;
+}
+
+.blogCardDate {
+    background-color: rgba(255, 165, 0, 0);
+}
+
+.blogButtonSeeMore {
+    margin-left: auto;
+}
+
+/* End - Blog Section */
