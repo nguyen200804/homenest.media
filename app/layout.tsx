@@ -6,6 +6,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 import "./globals.css";
+import { FooterCTA } from "@/components/layout";
 
 const homeNest = localFont({
   src: [
@@ -57,6 +58,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <main>
           {children}
         </main>
+        <FooterCTA />
         <Footer />
       </body>
     </html>

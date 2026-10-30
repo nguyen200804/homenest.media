@@ -1,12 +1,14 @@
 .buttonBottomRight {
+    border-radius: 50%;
     width: 50px;
     height: 50px;
-    display: inline-block;
-    overflow: hidden;
-    position: relative;
-    background-color: #181818 !important;
-    border-radius: 50%;
     transition: background-color .3s;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    background-color: #181818 !important;
+    background-clip: unset;
+    background-image: unset;
 }
 
 .buttonBottomRight:hover {

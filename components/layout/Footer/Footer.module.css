@@ -95,6 +95,7 @@ a.hn-footer__logo {
 
 img.hn-footer__logo-img {
     width: 240px;
+    height: auto;
 }
 
 /* ===== Typography ===== */
@@ -268,6 +269,7 @@ p.hn-footer__copyright {
 
     img.hn-footer__logo-img {
         width: 210px;
+        height: auto;
     }
 
     .hn-footer__brand-logo {
@@ -348,6 +350,7 @@ p.hn-footer__copyright {
 
     img.hn-footer__logo-img {
         width: 170px;
+        height: auto;
     }
 }
 

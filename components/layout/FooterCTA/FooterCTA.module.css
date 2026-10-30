@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.ctaContainer {
+  position: relative;
+  width: 100%;
+  padding: 80px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 800px;
+  background: linear-gradient(262deg, #E24C4A 0%, #386BB7 100%);
+  overflow: hidden;
+}
+
+.bgImageWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.bgImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.contentWrapper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 950px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.preTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.starIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.starIcon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.preTitleText {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: normal;
+}
+
+.headingWrapper {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.normalText {
+  font-weight: 600;
+}
+
+.cursive {
+  font-family: 'Great Vibes', cursive, sans-serif;
+  font-size: 1.3em;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0 4px;
+}
+
+.nextLine {
+  display: block;
+  margin-top: -0.1em;
+}
+
+.mainContent {
+  gap: 24px;
+  width: 100%;
+  display: flex;
+}
+
+/* Left panel form */
+.formBox {
+  background-color: rgba(244, 246, 250, 0.95);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+.formTitle {
+  color: #386bb7;
+  margin: 0 0 8px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inputGroup label {
+  color: #386bb7;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  width: 100%;
+  padding: 0.8em 1em;
+  border-radius: 0.625em;
+  border: 1px solid #dadaeb;
+  background-color: #fff;
+  font-size: 16px;
+  color: #05080c;
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  border-color: #e24c4a;
+}
+
+.inputGroup textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.errorMsg {
+  color: #ff4d4f;
+  font-size: 14px;
+  margin: 0;
+}
+
+.successMsg {
+  color: #52c41a;
+  font-size: 14px;
+  margin: 0;
+}
+
+.formFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 12px;
+}
+
+.contactInfo p {
+  color: #555;
+  font-size: 14px;
+  margin: 0 0 4px 0;
+}
+
+.copyEmail {
+  display: flex;
+  align-items: center;
+  gap: 0.33em;
+  cursor: pointer;
+  color: #386bb7;
+  font-weight: 600;
+  font-size: 18px;
+  transition: opacity 0.2s;
+}
+
+.copyEmail:hover {
+  opacity: 0.8;
+}
+
+.copyEmail svg {
+  color: #386bb7;
+}
+
+.copiedText {
+  color: #2e7d32;
+  font-size: 12px;
+}
+
+.submitBtn {
+  background: linear-gradient(262deg, #386bb7 0%, #e24c4a 100%);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 0.75em 1.25em;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(226, 76, 74, 0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+  white-space: nowrap;
+}
+
+.submitBtn:hover {
+  transform: scale(1.03);
+}
+
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Right panel info */
+.infoBox {
+  background-color: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  flex: 0.8;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.featureList li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.labelFeature {
+  font-size: 18px;
+}
+
+.imageCard {
+  width: 100%;
+  height: 225px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.imageCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.buttonCTA {
+  margin-top: auto;
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Custom CTA Button within FooterCTA */
+.ctaBtn {
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 1000px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75em;
+  padding: 0.25em 0.35em 0.25em 1.25em;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1;
+  height: 44px;
+}
+
+.ctaBtnText {
+  color: inherit;
+  font-weight: 600;
+}
+
+.ctaBtnIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.ctaBtn:hover {
+  transform: scale(1.02);
+}
+
+.ctaBtn:hover .ctaBtnIcon {
+  transform: translateX(2px);
+}
+
+.ctaBtnBlue {
+  background: linear-gradient(262deg, #386bb7 0%, #e24c4a 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(226, 76, 74, 0.3);
+}
+
+.ctaBtnBlue .ctaBtnText {
+  color: #ffffff;
+}
+
+.ctaBtnBlue .ctaBtnIcon {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.ctaBtnLight {
+  background: #ffffff;
+  color: #386bb7;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.ctaBtnLight .ctaBtnText {
+  color: #386bb7;
+}
+
+.ctaBtnLight .ctaBtnIcon {
+  background: #386bb7;
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 1400px) {
+  .headingWrapper {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .headingWrapper {
+    font-size: 42px;
+  }
+
+  .contentWrapper {
+    gap: 42px;
+  }
+}
+
+@media (max-width: 996px) {
+  .mainContent {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .formBox,
+  .infoBox {
+    gap: 24px;
+    padding: 20px;
+    flex: 1;
+  }
+
+  .labelFeature {
+    font-size: 16px;
+  }
+
+  .contactInfo p {
+    font-size: 13px;
+    margin: 0;
+  }
+
+  .copyEmail {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    gap: 8px;
+  }
+
+  .form {
+    gap: 12px;
+  }
+
+  .formFooter {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .submitBtn {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .formTitle {
+    font-size: 26px;
+    margin: 0;
+  }
+
+  .featureList {
+    gap: 12px;
+  }
+
+  .formBox,
+  .infoBox {
+    padding: 20px;
+  }
+
+  .headingWrapper {
+    font-size: 32px;
+  }
+
+  .ctaContainer {
+    padding: 50px 20px;
+  }
+
+  .contentWrapper {
+    gap: 36px;
+  }
+
+  .inputGroup input,
+  .inputGroup textarea {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .headingWrapper {
+    font-size: 28px;
+  }
+
+  .ctaContainer {
+    padding: 50px 16px;
+  }
+
+  .contentWrapper {
+    gap: 36px;
+  }
+
+  .submitBtn {
+    font-size: 14px;
+  }
+
+  .contactInfo p {
+    font-size: 12px;
+  }
+
+  .copyEmail {
+    font-size: 15px;
+  }
+
+  .form {
+    gap: 8px;
+  }
+
+  .inputGroup {
+    gap: 4px;
+  }
+
+  .formTitle {
+    font-size: 24px;
+  }
+
+  .formBox,
+  .infoBox {
+    padding: 16px;
+    border-radius: 12px;
+    gap: 20px;
+  }
+
+  .featureList {
+    gap: 8px;
+  }
+
+  .labelFeature {
+    font-size: 14px;
+  }
+
+  .inputGroup label {
+    font-size: 14px;
+  }
+
+  .inputGroup input,
+  .inputGroup textarea {
+    font-size: 14px;
+  }
+
+  .buttonCTA {
+    font-size: 14px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ctaBtn {
+    justify-content: center;
+    width: 100%;
+  }
+}

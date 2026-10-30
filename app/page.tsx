@@ -5,7 +5,7 @@ import { ManropeText, TextGradient } from "@/components/ui/Text";
 import { PROJECTS } from "@/constants/projects";
 import { TEAM_ITEMS } from "@/constants/team";
 import { LIST_TESTIMONIAL } from "@/constants/testimonial";
-import { FAQSection } from "@/components/sections";
+import { AccompanySection, FAQSection } from "@/components/sections";
 import { Star } from "@/components/ui/icons";
 import { PARTNER } from "@/constants/partner";
 import { BLOG_LIST } from "@/constants/blog";
@@ -55,10 +55,6 @@ const PARTNER_LOGO_UNIT_WIDTH = 248;
 /** Số lần danh sách logo đối tác được render (bản gốc + bản sao) để marquee chạy vòng lặp liền mạch. */
 const DUPLICATE_PARTNER = 2;
 
-/** Chia logo đối tác theo dòng (1, 2, 3). */
-const PARTNER_LINES = ([1, 2, 3] as const).map((line) =>
-  PARTNER.filter((partner) => partner.line === line),
-);
 
 /** Danh sách logo đối tác không trùng (dùng cho marquee 1 hàng). */
 const PARTNER_LOGOS = PARTNER.filter(
@@ -449,76 +445,7 @@ export default function Home() {
 
 
 
-      <section className={styles.accompanySection}>
-        {/* hình con bò xám bên trái */}
-        <div className={styles.accompanyDecor}>
-          <Image
-            className={styles.accompanyDecorImage}
-            src="/images/dau-trau.webp"
-            alt=""
-            width={1484}
-            height={2560}
-            aria-hidden="true"
-          />
-        </div>
-
-        <div className={styles.accompanyQuote}>
-          <blockquote className={styles.accompanyQuoteText}>
-            <i><TextGradient text="Không chỉ dịch vụ - Homenest đồng hành" /> trên mọi lĩnh vực phát triển của bạn</i>
-          </blockquote>
-          <div className={styles.accompanyQuoteAuthor}>
-            <Image
-              className={styles.accompanyQuoteSignature}
-              src="/images/chu_ky.svg"
-              alt="Chữ ký Co-Founder HomeNest.media"
-              width={288}
-              height={122}
-            />
-            <span className={styles.accompanyQuoteRole}>CO-FOUNDER</span>
-          </div>
-        </div>
-
-
-        <div className={styles.accompanyMarquee}>
-          <div className={styles.accompanyMarqueeWrapper}>
-            {/* Duplicate */}
-            {Array.from({ length: DUPLICATE_PARTNER }).map((_, copyIndex) => {
-              /** Bản sao: ẩn khỏi screen reader. */
-              const isClone = copyIndex > 0;
-
-              return (
-                <div
-                  key={copyIndex}
-                  className={styles.accompanyMarqueeGroup}
-                  aria-hidden={isClone || undefined}
-                >
-                  {PARTNER_LINES.map((partners, lineIndex) => (
-                    <div key={lineIndex} className={styles.accompanyMarqueeLine}>
-                      {partners.map((partner) => (
-                        <div
-                          key={partner.urlImage}
-                          className={`${styles.accompanyMarqueeItem} ${partner.width === 2
-                            ? styles.accompanyMarqueeItemWide
-                            : styles.accompanyMarqueeItemSquare
-                            }`}
-                        >
-                          <Image
-                            className={styles.accompanyMarqueeImage}
-                            src={partner.urlImage}
-                            alt={isClone ? "" : getPartnerName(partner.urlImage)}
-                            width={partner.width * PARTNER_LOGO_UNIT_WIDTH}
-                            height={PARTNER_LOGO_HEIGHT}
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      <AccompanySection />
 
 
 

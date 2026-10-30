@@ -15,7 +15,7 @@ export interface ButtonTransparentToGradientProps {
 
 export default function ButtonTransparentToGradient({
     text,
-    link,
+    link = "https://zalo.me/+84708070888",
     newTab = false,
     className = "",
     onClick,

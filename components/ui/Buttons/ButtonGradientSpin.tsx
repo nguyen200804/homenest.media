@@ -11,6 +11,8 @@ export interface ButtonGradientSpinProps {
     newTab?: boolean;
     className?: string;
     onClick?: () => void;
+    type?: "button" | "submit" | "reset";
+    disabled?: boolean;
 }
 
 export default function ButtonGradientSpin({
@@ -19,6 +21,8 @@ export default function ButtonGradientSpin({
     newTab = false,
     className = "",
     onClick,
+    type = "button",
+    disabled = false,
 }: ButtonGradientSpinProps) {
     const classes = [styles.button, className].filter(Boolean).join(" ");
 
@@ -48,7 +52,7 @@ export default function ButtonGradientSpin({
     }
 
     return (
-        <button type="button" className={classes} onClick={onClick}>
+        <button type={type} className={classes} onClick={onClick} disabled={disabled}>
             {content}
         </button>
     );

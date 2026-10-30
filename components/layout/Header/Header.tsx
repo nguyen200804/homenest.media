@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
@@ -120,7 +120,7 @@ export default function Header() {
 
                       {hasChildren && (
                         <ul className={styles.dropdown}>
-                          {item.children!.map((child) => {
+                          {item.children!.map((child, childIndex) => {
                             const hasSub = !!child.children?.length;
                             const subKey = `${item.label}/${child.label}`;
                             const subOpen = openSubKey === subKey;
@@ -128,6 +128,7 @@ export default function Header() {
                               <li
                                 key={child.label}
                                 className={cn(styles.dropdownItem, hasSub && styles.hasChildren, subOpen && styles.isOpen)}
+                                style={{ "--i": childIndex } as CSSProperties}
                               >
                                 <div className={styles.dropdownRow}>
                                   <Link href={child.href} className={styles.dropdownLink} onClick={closeAll}>
@@ -149,9 +150,10 @@ export default function Header() {
 
                                 {hasSub && (
                                   <ul className={styles.subdropdown}>
-                                    {child.children!.map((sub) => (
-                                      <li key={sub.label}>
+                                    {child.children!.map((sub, subIndex) => (
+                                      <li key={sub.label} style={{ "--i": subIndex } as CSSProperties}>
                                         <Link href={sub.href} className={styles.subdropdownLink} onClick={closeAll}>
+                                          <span className={styles.subdropdownMarker} aria-hidden="true" />
                                           {sub.label}
                                         </Link>
                                       </li>

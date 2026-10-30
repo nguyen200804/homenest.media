@@ -61,40 +61,42 @@ export default function CTASection({
 
     return (
         <section className={wrapperClassName}>
-            <div className={styles.card}>
-                {/* Left – content */}
-                <div className={styles.content}>
-                    <div className={styles.header}>
-                        {/* Badge */}
-                        <div className={styles.badge}>
-                            <span className={styles.badgeDot} />
-                            <span className={styles.badgeText}>{badge}</span>
+            <div className="container">
+                <div className={styles.card}>
+                    {/* Left – content */}
+                    <div className={styles.content}>
+                        <div className={styles.header}>
+                            {/* Badge */}
+                            <div className={styles.badge}>
+                                <span className={styles.badgeDot} />
+                                <span className={styles.badgeText}>{badge}</span>
+                            </div>
+
+                            {/* Heading */}
+                            <h2 className={styles.heading}>{heading}</h2>
+
+                            {/* Description */}
+                            <p className={styles.description}>{description}</p>
                         </div>
 
-                        {/* Heading */}
-                        <h2 className={styles.heading}>{heading}</h2>
-
-                        {/* Description */}
-                        <p className={styles.description}>{description}</p>
+                        {/* CTA Button */}
+                        <Link href={ctaHref} className={styles.ctaButton}>
+                            {ctaText}
+                        </Link>
                     </div>
 
-                    {/* CTA Button */}
-                    <Link href={ctaHref} className={styles.ctaButton}>
-                        {ctaText}
-                    </Link>
-                </div>
-
-                {/* Right – person image */}
-                <div className={styles.imageWrapper}>
-                    <Image
-                        src={imageSrc}
-                        alt="Expert consultant"
-                        title="Expert consultant"
-                        className={styles.image}
-                        width={270}
-                        height={330}
-                        unoptimized
-                    />
+                    {/* Right – person image */}
+                    <div className={styles.imageWrapper}>
+                        <Image
+                            src={imageSrc}
+                            alt="Expert consultant"
+                            title="Expert consultant"
+                            className={styles.image}
+                            width={270}
+                            height={330}
+                            unoptimized
+                        />
+                    </div>
                 </div>
             </div>
         </section>

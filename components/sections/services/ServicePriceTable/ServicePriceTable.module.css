@@ -1,18 +1,21 @@
 /* Start - Service Price Table Section */
 .servicePriceTable {
-    background-color: rgba(78, 142, 237, 0);
+    padding: 100px 0;
 }
 
 .servicePriceTableWrapper {
-    background-color: rgba(215, 84, 160, 0);
+    margin-left: calc(((max(100vw, 1400px) - 1400px) / 4) * -1);
+    margin-right: calc(((max(100vw, 1400px) - 1400px) / 4) * -1);
 }
 
 .servicePriceTableHeader {
-    background-color: rgba(45, 198, 126, 0);
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 50px;
 }
 
 .servicePriceTableTitle {
-    background-color: rgba(240, 128, 48, 0);
+    font-size: 48px;
 }
 
 .servicePriceTableContent {
@@ -20,35 +23,82 @@
 }
 
 .servicePriceTableList {
-    background-color: rgba(18, 175, 236, 0);
+    display: flex;
 }
 
 .servicePriceTableCard {
-    background-color: rgba(255, 107, 107, 0);
+    padding: 0 10px;
+    flex: 1;
+}
+
+.servicePriceTableCardItem {
+    background-color: #f0f2f4;
+    border-radius: 16px;
+    padding: 24px 24px 32px;
+    border: 1px solid #DDDDDD;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.servicePriceTableCardImage {
+    width: 100%;
+    height: 46px;
+    object-fit: cover;
+    border-radius: 6px;
 }
 
 .servicePriceTableCardHeader {
-    background-color: rgba(32, 201, 151, 0);
+    position: relative;
+    margin-left: -34px;
+    width: 50%;
 }
 
 .servicePriceTableCardTitle {
-    background-color: rgba(250, 176, 5, 0);
+    background-color: #fab00500;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
 }
 
 .servicePriceTableCardDesc {
-    background-color: rgba(116, 143, 252, 0);
+    margin-top: 16px;
 }
 
 .servicePriceTableCardDivider {
-    background-color: rgba(247, 131, 172, 0);
+    margin: 14px 0;
+    color: #fff;
 }
 
 .servicePriceTableFeatureList {
-    background-color: rgba(56, 217, 169, 0);
+    font-size: .9em;
+    margin-bottom: auto;
 }
 
 .servicePriceTableFeatureItem {
-    background-color: rgba(255, 146, 43, 0);
+    display: flex;
+
+}
+
+.servicePriceTableFeatureItem:not(:first-child) {
+    margin-top: 0.6em;
+}
+
+.servicePriceTableFeatureItem svg {
+    min-width: 1.4em;
+    width: 1.4em;
+    margin-right: 1em;
+    align-self: flex-start;
+}
+
+.servicePriceTableFeatureItem span {
+    line-height: 1.4em;
 }
 
 .servicePriceTableCardNote {
@@ -56,22 +106,100 @@
 }
 
 .servicePriceTableCardFooter {
-    background-color: rgba(77, 171, 247, 0);
+    height: 45px;
+    display: flex;
+    margin-top: 16px;
 }
 
 .servicePriceTablePhoneBtn {
-    background-color: rgba(235, 87, 87, 0);
+    width: 30%;
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #e64b48, #2463ff, #ff7a1a, #5bb9ff, #ff2831);
+    background-size: 500% 100%;
+    animation: moveGradient 10s linear infinite;
+}
+
+.servicePriceTablePhoneBtn svg {
+    color: #fff;
+    width: 24px;
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .servicePriceTablePriceInfo {
-    background-color: rgba(46, 204, 113, 0);
+    width: 70%;
+    position: relative;
+    color: #020C6A;
+    font-weight: 700;
+    font-size: 28px;
+    overflow: hidden;
 }
 
-.servicePriceTablePriceNumber {
-    background-color: rgba(155, 89, 182, 0);
+.servicePriceTablePriceInfo span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    align-content: center;
+    text-align: center;
 }
 
-.servicePriceTablePriceText {
-    background-color: rgba(241, 196, 15, 0);
+.servicePriceTablePriceInfo .servicePriceTablePriceNumber {
+    height: 48px;
+    width: 100%;
+    color: #020C6A;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(0px) scale(1);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
 }
+
+.servicePriceTablePriceInfo:hover .servicePriceTablePriceNumber {
+
+    transform: translateY(-50px) scale(0) rotate(120deg);
+}
+
+.servicePriceTablePriceInfo .servicePriceTablePriceText {
+    height: 48px;
+    width: 100%;
+    color: #020C6A;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(50px) scale(0.8);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.servicePriceTablePriceInfo:hover .servicePriceTablePriceText {
+    transform: translateY(0) scale(1) translateX(0px);
+}
+
+
+
 /* End - Service Price Table Section */

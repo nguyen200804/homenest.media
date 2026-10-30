@@ -1,9 +1,8 @@
 /* ── Wrapper ── */
 .wrapper {
   width: 100%;
-  max-width: 1600px;
   margin: 0 auto;
-  padding: 60px 40px;
+  padding: 50px 0px;
   box-sizing: border-box;
 }
 
@@ -23,7 +22,7 @@
   overflow: visible;
 
   /* gradient */
-  background: linear-gradient(121deg, rgb(2, 27, 123) 0%, rgb(22, 112, 222) 29%, rgb(25, 52, 147) 100%);
+  background: linear-gradient(262deg, #E24C4A 0%, #386BB7 100%);
 
   /* border */
   border: 1px solid rgba(255, 255, 255, 0.35);
@@ -36,7 +35,7 @@
     0px 4.43px 4.43px -2.25px rgba(86, 125, 176, 0.30),
     0px 9.83px 9.83px -3px rgba(86, 125, 176, 0.25),
     0px 25px 25px -3.75px rgba(86, 125, 176, 0.11),
-    0px 0px 0px 1px rgb(24, 66, 163);
+    0px 0px 0px 1px #E24C4A;
 }
 
 /* ── Content (left side) ── */
@@ -61,24 +60,23 @@
 
 /* ── Badge ── */
 .badge {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(255, 255, 255, 0.2);
+  background: #fff3;
   border-radius: 99px;
-  padding: 6px 14px 6px 10px;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.4em 1.4em;
+  display: flex;
 }
 
 .badgeDot {
-  width: 8px;
-  height: 8px;
+  width: 0.5em;
+  height: 0.5em;
   border-radius: 50%;
   background: #fff;
   flex-shrink: 0;
 }
 
 .badgeText {
-  font-size: 13px;
   font-weight: 500;
   color: #fff;
   white-space: nowrap;
@@ -97,7 +95,6 @@
 /* ── Description ── */
 .description {
   margin: 0;
-  font-size: 18px;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.85);
   font-weight: 400;
@@ -110,8 +107,8 @@
   padding: 12px 24px;
   border-radius: 24px;
   background: #fff;
-  color: rgb(26, 59, 145);
-  -webkit-text-fill-color: rgb(26, 59, 145);
+  color: #386bb7;
+  -webkit-text-fill-color: #386bb7;
   -webkit-background-clip: border-box;
   background-clip: border-box;
   font-size: 13px;

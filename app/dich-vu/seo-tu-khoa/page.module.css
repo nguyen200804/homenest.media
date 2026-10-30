@@ -1,0 +1,148 @@
+/* Start - Data Section */
+.dataSection {
+    background-color: #f0f2f4;
+    padding: 100px 0;
+}
+
+.dataWrapper {
+    background-color: rgba(81, 118, 237, 0);
+}
+
+.dataContent {
+    display: flex;
+}
+
+.dataTitle {
+    width: 60%;
+    padding-right: 50px;
+    font-size: 48px;
+}
+
+.dataBody {
+    width: 40%;
+}
+
+.dataDescription {
+    background-color: rgba(212, 171, 44, 0);
+}
+
+.dataCta {
+    margin-top: 24px;
+}
+
+.dataStats {
+    display: flex;
+    margin-top: 72px;
+    gap: 50px;
+}
+
+.dataStatList {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.dataStatItem {
+    align-content: center;
+}
+
+.dataStatNumber {
+    font-size: 80px;
+    line-height: 1em;
+}
+
+.dataStatLabel {
+    font-size: 22px;
+}
+
+.dataMedia {
+    width: 50%;
+}
+
+.dataImage {
+    border-radius: 20px;
+}
+
+/* End - Data Section */
+
+
+/* Start - SEO INtro */
+
+.seoIntro {
+    padding: 100px 0;
+}
+
+.seoIntroWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.seoIntroHeader {
+
+    max-width: 600px;
+}
+
+.seoIntroTitle {
+    font-size: 48px;
+}
+
+.seoIntroBrand {
+    max-width: 520px;
+}
+
+.seoIntroLogo {
+    background-color: rgba(213, 74, 34, 0);
+}
+
+.seoIntroBenefitList {
+    display: flex;
+    gap: 32px;
+}
+
+.seoIntroBenefitItem {
+    flex: 1;
+}
+
+.seoIntroBenefitIcon {
+    background-image: linear-gradient(var(--tg-angle, 90deg), var(--tg-from, #386bb7), var(--tg-to, #e24c4a));
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.seoIntroBenefitIcon svg {
+    width: 28px;
+    height: 28px;
+}
+
+
+.seoIntroBenefitTitle {
+    font-size: 24px;
+    margin: 12px 0 12px;
+}
+
+.seoIntroBenefitDescription {
+    background-color: rgba(204, 248, 86, 0);
+}
+
+.seoIntroDivider {
+    background-color: rgb(187, 187, 187);
+    width: 1px;
+    height: 100%;
+}
+
+.seoIntroMedia {
+    background-color: rgba(128, 208, 229, 0);
+}
+
+.seoIntroImage {
+    aspect-ratio: 2.5;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+/* End - SEO Intro */

@@ -16,6 +16,10 @@ export {
 export { RocketIcon } from "./RocketIcon";
 export { default as Star } from "./Star";
 export { default as Thunder } from "./Thunder";
+export { default as ChipIcon } from "./ChipIcon";
+export { default as PhoneCallIcon } from "./PhoneCallIcon";
+export { default as BookmarkIcon } from "./BookmarkIcon";
+export { default as QuoteIcon } from "./QuoteIcon";
 export {
     default as ChevronRight,
     ChevronDown,
