@@ -1,8 +1,16 @@
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import { TextGradient } from "@/components/ui/Text";
 import { ChipIcon, PhoneCallIcon } from "@/components/ui/icons";
 import styles from "../../../styles/sections/services/ServicePriceTable.module.css";
 import Image from "next/image";
+
+const DEFAULT_IMAGE_TAGS = [
+    "/images/basic.png",
+    "/images/golden.png",
+    "/images/diamond.png",
+    "/images/platinum.png",
+];
+const DEFAULT_COLORS = ["#2FB5B1", "#FD7401", "#020C69", "#972395"];
 
 export type PricePlanItem = {
     title: string;
@@ -13,6 +21,7 @@ export type PricePlanItem = {
     phone?: string;
     price: string;
     ctaText?: string;
+    color?: string;
 };
 
 export const DEFAULT_PRICE_PLANS: PricePlanItem[] = [
@@ -37,6 +46,7 @@ export const DEFAULT_PRICE_PLANS: PricePlanItem[] = [
         note: "*Liên hệ ngay để được tư vấn miễn phí",
         price: "9.000.000",
         ctaText: "Tư vấn ngay",
+        color: "#2FB5B1",
     },
     {
         title: "GOLDEN",
@@ -60,6 +70,7 @@ export const DEFAULT_PRICE_PLANS: PricePlanItem[] = [
         note: "*Liên hệ ngay để được tư vấn miễn phí",
         price: "19.000.000",
         ctaText: "Tư vấn ngay",
+        color: "#FD7401",
     },
     {
         title: "DIAMOND",
@@ -83,6 +94,7 @@ export const DEFAULT_PRICE_PLANS: PricePlanItem[] = [
         note: "*Liên hệ ngay để được tư vấn miễn phí",
         price: "39.000.000",
         ctaText: "Tư vấn ngay",
+        color: "#020C69",
     },
     {
         title: "PLATINUM",
@@ -108,6 +120,7 @@ export const DEFAULT_PRICE_PLANS: PricePlanItem[] = [
         note: "*Liên hệ ngay để được tư vấn miễn phí",
         price: "Linh hoạt",
         ctaText: "Tư vấn ngay",
+        color: "#972395",
     },
 ];
 
@@ -136,14 +149,21 @@ export default function ServicePriceTable({
 
                     <div className={styles.servicePriceTableContent}>
                         <div className={styles.servicePriceTableList}>
-                            {items.map((plan, index) => (
-                                <article key={index} className={styles.servicePriceTableCard}>
+                            {items.map((plan, index) => {
+                                const imageTag = plan.imageTag || DEFAULT_IMAGE_TAGS[index % DEFAULT_IMAGE_TAGS.length];
+                                const color = plan.color || DEFAULT_COLORS[index % DEFAULT_COLORS.length];
+                                return (
+                                <article
+                                    key={index}
+                                    className={styles.servicePriceTableCard}
+                                    style={{ "--plan-color": color } as CSSProperties}
+                                >
                                     <div className={styles.servicePriceTableCardItem}>
                                         <div className={styles.servicePriceTableCardHeader}>
-                                            {plan.imageTag && (
+                                            {imageTag && (
                                                 <Image
                                                     className={styles.servicePriceTableCardImage}
-                                                    src={plan.imageTag}
+                                                    src={imageTag}
                                                     alt={plan.title}
                                                     width={120}
                                                     height={36}
@@ -182,7 +202,8 @@ export default function ServicePriceTable({
                                         </div>
                                     </div>
                                 </article>
-                            ))}
+                                );
+                            })}
                         </div>
                     </div>
 

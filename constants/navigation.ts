@@ -3,7 +3,7 @@ import type { NavItem } from "@/types/navigation.types";
 export const NAV_ITEMS: NavItem[] = [
   { label: "Trang chủ", href: "/" },
   {
-    label: "Dịch vụ HomeNest",
+    label: "Dịch vụ Homenest",
     href: "/dich-vu",
     children: [
       {
@@ -33,8 +33,11 @@ export const NAV_ITEMS: NavItem[] = [
         label: "Quảng cáo",
         href: "/dich-vu/quang-cao",
         children: [
-          { label: "Quảng cáo ngoài trời", href: "/dich-vu/quang-cao-ngoai-troi" },
-          { label: "Quảng cáo truyền hình", href: "/dich-vu/quang-cao-truyen-hinh" },
+          { label: "Thi công Booth quảng cáo", href: "/dich-vu/thiet-ke-thi-cong-booth-quang-cao" },
+          { label: "Thiết kế – thi công gian hàng", href: "/dich-vu/thiet-ke-thi-cong-gian-hang" },
+          { label: "Thiết kế – thi công Backdrop", href: "/dich-vu/thiet-ke-thi-cong-backdrop" },
+          { label: "Thi công hàng rào công trình", href: "/dich-vu/thiet-ke-thi-cong-hang-rao-cong-trinh" },
+          { label: "Dán Decal kính văn phòng", href: "/dich-vu/dan-decal-kinh-van-phong" },
         ],
       },
       { label: "Event", href: "/dich-vu/event" },
@@ -45,9 +48,36 @@ export const NAV_ITEMS: NavItem[] = [
     label: "Wiki",
     href: "/wiki",
     children: [
-      { label: "Kiến thức SEO", href: "/wiki/seo" },
-      { label: "Kiến thức Marketing", href: "/wiki/marketing" },
-      { label: "Kiến thức Thương hiệu", href: "/wiki/thuong-hieu" },
+      {
+        label: "Wiki Digital Marketing",
+        href: "/wiki/wiki-digital-marketing",
+        children: [
+          { label: "Cẩm nang Ads", href: "/wiki/cam-nang-ads" },
+          { label: "Cẩm nang SEO", href: "/wiki/cam-nang-seo" },
+          { label: "Cẩm nang Social Media", href: "/wiki/cam-nang-social-media" },
+          { label: "Xu Hướng Digital Marketing", href: "/wiki/xu-huong-digital-marketing" },
+        ],
+      },
+      {
+        label: "Wiki Branding",
+        href: "/wiki/wiki-branding",
+        children: [
+          { label: "Cẩm nang Branding", href: "/wiki/cam-nang-branding" },
+          { label: "Kinh nghiệm Branding", href: "/wiki/kinh-nghiem-branding" },
+          { label: "Xu hướng Branding", href: "/wiki/xu-huong-branding" },
+        ],
+      },
+      {
+        label: "Wiki Event, triễn lãm",
+        href: "/wiki/wiki-event-trien-lam",
+        children: [
+          { label: "Cẩm nang Booth triễn lãm", href: "/wiki/cam-nang-booth-trien-lam" },
+          { label: "Cẩm nang thiết kế", href: "/wiki/cam-nang-thiet-ke" },
+          { label: "Thông tin triễn lãm", href: "/wiki/thong-tin-trien-lam" },
+          { label: "Xu hướng Event, Triễn Lãm", href: "/wiki/xu-huong-event-trien-lam" },
+        ],
+      },
+      { label: "Wiki HomeNest Media", href: "/wiki/wiki-homenest-media" },
     ],
   },
   { label: "Tuyển dụng", href: "/tuyen-dung" },

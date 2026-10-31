@@ -48,7 +48,7 @@ export default function Page() {
                         <div className={styles.aboutHeader}>
                             <h2 className={styles.aboutTitle}><TextGradient text="Đồng bộ nhận diện, khẳng định dấu ấn thương hiệu" /></h2>
                             <p className={styles.aboutDescription}>
-                                HomeNest Media triển khai các dự án <a href="https://homenest.media/dich-vu-homenest/branding/"><b>Branding</b></a> đa dạng, từ thiết kế nhận diện thương hiệu đến Profile công ty và Catalogue. Mỗi thiết kế được định hướng theo đặc trưng thương hiệu, kết hợp màu sắc, hình ảnh và bố cục phù hợp nhằm truyền tải thông điệp nhất quán. Các sản phẩm hướng đến việc xây dựng hình ảnh chuyên nghiệp, hỗ trợ doanh nghiệp giới thiệu năng lực, quảng bá sản phẩm và tạo dấu ấn với khách hàng, đối tác.
+                                HomeNest.media triển khai các dự án <a href="https://homenest.media/dich-vu-homenest/branding/"><b>Branding</b></a> đa dạng, từ thiết kế nhận diện thương hiệu đến Profile công ty và Catalogue. Mỗi thiết kế được định hướng theo đặc trưng thương hiệu, kết hợp màu sắc, hình ảnh và bố cục phù hợp nhằm truyền tải thông điệp nhất quán. Các sản phẩm hướng đến việc xây dựng hình ảnh chuyên nghiệp, hỗ trợ doanh nghiệp giới thiệu năng lực, quảng bá sản phẩm và tạo dấu ấn với khách hàng, đối tác.
                             </p>
                         </div>
                         <div className={styles.aboutContent}>

@@ -88,7 +88,12 @@
     margin-top: 0.6em;
 }
 
+.servicePriceTableCardDesc > strong:first-of-type {
+    color: var(--plan-color, inherit);
+}
+
 .servicePriceTableFeatureItem svg {
+    color: var(--plan-color, currentColor);
     min-width: 1.4em;
     width: 1.4em;
     margin-right: 1em;
