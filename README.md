@@ -199,6 +199,7 @@ Tất cả được export từ `@/components/sections/services` hoặc `@/compo
 | `ServiceExperience`   | `heading?`, `items?`, `autoplay?` (ms, mặc định `6000`)                        | `{ num?, title, desc, image?, bg?, card?, thumb? }` |
 | `ServicePriceTable`   | `heading?`, `items?`                                                           | `{ title, imageTag?, description, features[], note?, phone?, price, ctaText? }` |
 | `ServiceProject`      | `heading?`, `description?`, `items?`                                           | `Project`                                        |
+| `ServiceResult`       | `heading?`, `items?`, `columns?` (mặc định `3`), `mediaSrc?`, `mediaAlt?`      | `{ label, number }`                              |
 | `ServiceBenefits`     | `heading?`, `imageSrc?`, `imageAlt?`, `items?`, `ctaText?`, `ctaLink?`         | `{ number?, title, desc }`                       |
 | `ServiceHowWeWork`    | `heading?`, `items?`, `showCta?`, `ctaText?`, `ctaLink?`                       | `{ number?, tag?, title, desc? }`                |
 | `ServiceReview`       | `heading?`, `items?`, `statNumber?`, `statLabel?`, `backgroundSrc?`            | `{ quote, author }`                              |

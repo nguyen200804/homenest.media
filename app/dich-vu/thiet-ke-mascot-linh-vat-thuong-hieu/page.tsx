@@ -166,7 +166,7 @@ export default function Page() {
                 items={[
                     {
                         title: "Tiếp nhận & Ký kết",
-                        desc: "HomeNest Media tiếp nhận yêu cầu, tìm hiểu mục tiêu sử dụng mascot và tư vấn giải pháp thiết kế phù hợp. Hai bên thống nhất phạm vi công việc, chi phí và các hạng mục bàn giao trước khi ký kết hợp đồng.",
+                        desc: "HomeNest.media tiếp nhận yêu cầu, tìm hiểu mục tiêu sử dụng mascot và tư vấn giải pháp thiết kế phù hợp. Hai bên thống nhất phạm vi công việc, chi phí và các hạng mục bàn giao trước khi ký kết hợp đồng.",
                     },
                     {
                         title: "Nghiên cứu thương hiệu",
@@ -190,7 +190,7 @@ export default function Page() {
                     },
                     {
                         title: "Bàn giao & Nghiệm thu",
-                        desc: "HomeNest Media bàn giao file thiết kế mascot theo định dạng và danh mục đã thỏa thuận. Hai bên kiểm tra sản phẩm và thực hiện nghiệm thu theo hợp đồng.",
+                        desc: "HomeNest.media bàn giao file thiết kế mascot theo định dạng và danh mục đã thỏa thuận. Hai bên kiểm tra sản phẩm và thực hiện nghiệm thu theo hợp đồng.",
                     },
                     {
                         title: "Hỗ trợ ứng dụng mascot",
@@ -206,12 +206,12 @@ export default function Page() {
                     {
                         tag: "Bản dự thảo",
                         title: "Gửi phương án thiết kế mascot",
-                        desc: "HomeNest Media gửi các phương án mascot để khách hàng đánh giá tạo hình, màu sắc, biểu cảm và phong cách nhân vật. Hai bên xem xét mức độ phù hợp với cá tính thương hiệu.",
+                        desc: "HomeNest.media gửi các phương án mascot để khách hàng đánh giá tạo hình, màu sắc, biểu cảm và phong cách nhân vật. Hai bên xem xét mức độ phù hợp với cá tính thương hiệu.",
                     },
                     {
                         tag: "Tiếp nhận phản hồi",
                         title: "Tiếp nhận phản hồi từ khách hàng",
-                        desc: "HomeNest Media tổng hợp góp ý về các chi tiết cần giữ lại, điều chỉnh hoặc bổ sung. Hai bên thống nhất nội dung chỉnh sửa trước khi hoàn thiện mascot.",
+                        desc: "HomeNest.media tổng hợp góp ý về các chi tiết cần giữ lại, điều chỉnh hoặc bổ sung. Hai bên thống nhất nội dung chỉnh sửa trước khi hoàn thiện mascot.",
                     },
                     {
                         tag: "Chỉnh sửa thiết kế",
@@ -221,12 +221,12 @@ export default function Page() {
                     {
                         tag: "Duyệt thiết kế",
                         title: "Xác nhận thiết kế mascot cuối cùng",
-                        desc: "HomeNest Media gửi bản mascot hoàn thiện để khách hàng kiểm tra tạo hình, màu sắc và đặc điểm nhận diện trước khi xác nhận.",
+                        desc: "HomeNest.media gửi bản mascot hoàn thiện để khách hàng kiểm tra tạo hình, màu sắc và đặc điểm nhận diện trước khi xác nhận.",
                     },
                     {
                         tag: "Bàn giao file",
                         title: "Bàn giao file thiết kế mascot",
-                        desc: "HomeNest Media bàn giao file theo định dạng và danh mục đã thống nhất, phục vụ ứng dụng mascot trong hoạt động Branding, marketing và truyền thông.",
+                        desc: "HomeNest.media bàn giao file theo định dạng và danh mục đã thống nhất, phục vụ ứng dụng mascot trong hoạt động Branding, marketing và truyền thông.",
                     },
                 ]}
             />

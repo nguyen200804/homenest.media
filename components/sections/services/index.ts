@@ -33,3 +33,6 @@ export type { ServiceTestimonialsProps } from "./ServiceTestimonials";
 
 export { default as ServiceExperience, DEFAULT_EXPERIENCE_ITEMS } from "./ServiceExperience";
 export type { ServiceExperienceProps, ExperienceItem } from "./ServiceExperience";
+
+export { default as ServiceResult, DEFAULT_RESULT_ITEMS } from "./ServiceResult";
+export type { ServiceResultProps, ResultItem } from "./ServiceResult";

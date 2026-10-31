@@ -28,8 +28,7 @@
     padding-bottom: 50px;
 }
 
-.faqTitle {
-}
+.faqTitle {}
 
 .faqToggle {
     flex-shrink: 0;
@@ -75,6 +74,8 @@
 
 .faqQuestion {
     font-size: 28px;
+    line-height: 1.2em;
+
 }
 
 /* Accordion: animate chiều cao bằng grid-template-rows (0fr -> 1fr) */

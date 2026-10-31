@@ -174,27 +174,27 @@ export default function Home() {
                 <h3 className={styles.serviceCardTitle}>
                   <TextGradient text="Branding" />
                 </h3>
-                <p className={styles.serviceCardText}>Dịch vụ Branding của HomeNest giúp xây dựng thương hiệu mạnh mẽ, khác biệt và gắn kết với khách hàng thông qua chiến lược sáng tạo, thiết kế chuyên nghiệp và giải pháp toàn diện.</p>
+                <p className={styles.serviceCardText}>Dịch vụ Branding của HomeNest.media giúp xây dựng thương hiệu mạnh mẽ, khác biệt và gắn kết với khách hàng thông qua chiến lược sáng tạo, thiết kế chuyên nghiệp và giải pháp toàn diện.</p>
               </div>
               <div className={styles.serviceCard}>
                 <h3 className={styles.serviceCardTitle}>
                   <TextGradient text="Digital Marketing" />
                 </h3>
-                <p className={styles.serviceCardText}>Dịch vụ Digital Marketing của HomeNest mang đến chiến lược trực tuyến đột phá, kết hợp SEO, quảng cáo và nội dung sáng tạo để thúc đẩy sự tăng trưởng vượt trội, tối đa hóa chuyển đổi và xây dựng thương hiệu mạnh mẽ trên mọi nền tảng số.
+                <p className={styles.serviceCardText}>Dịch vụ Digital Marketing của HomeNest.media mang đến chiến lược trực tuyến đột phá, kết hợp SEO, quảng cáo và nội dung sáng tạo để thúc đẩy sự tăng trưởng vượt trội, tối đa hóa chuyển đổi và xây dựng thương hiệu mạnh mẽ trên mọi nền tảng số.
                 </p>
               </div>
               <div className={styles.serviceCard}>
                 <h3 className={styles.serviceCardTitle}>
                   <TextGradient text="Thi Công Quảng Cáo" />
                 </h3>
-                <p className={styles.serviceCardText}>Dịch vụ thi công quảng cáo của HomeNest mang đến những giải pháp sáng tạo, từ thiết kế đến thi công, giúp thương hiệu của bạn nổi bật và gây ấn tượng mạnh mẽ, thu hút sự chú ý và tạo dấu ấn khó quên trong lòng khách hàng.
+                <p className={styles.serviceCardText}>Dịch vụ thi công quảng cáo của HomeNest.media mang đến những giải pháp sáng tạo, từ thiết kế đến thi công, giúp thương hiệu của bạn nổi bật và gây ấn tượng mạnh mẽ, thu hút sự chú ý và tạo dấu ấn khó quên trong lòng khách hàng.
                 </p>
               </div>
               <div className={styles.serviceCard}>
                 <h3 className={styles.serviceCardTitle}>
                   <TextGradient text="Tổ Chức Sự Kiện" />
                 </h3>
-                <p className={styles.serviceCardText}>Dịch vụ tổ chức sự kiện của HomeNest chuyên tạo ra những trải nghiệm ấn tượng và chuyên nghiệp, từ lên ý tưởng đến thực thi, đảm bảo mỗi sự kiện đều mang lại dấu ấn khó quên và kết nối mạnh mẽ với khách tham dự.
+                <p className={styles.serviceCardText}>Dịch vụ tổ chức sự kiện của HomeNest.media chuyên tạo ra những trải nghiệm ấn tượng và chuyên nghiệp, từ lên ý tưởng đến thực thi, đảm bảo mỗi sự kiện đều mang lại dấu ấn khó quên và kết nối mạnh mẽ với khách tham dự.
                 </p>
               </div>
             </div>
@@ -392,7 +392,7 @@ export default function Home() {
               Giải pháp chất lượng cho doanh nghiệp
             </h2>
             <p className={styles.teamSectionDescription}>
-              Những website phần mềm từ HomeNest luôn được tư vấn, phát triển, tối ưu nhằm mang lại hiệu quả rõ rệt cho hoạt động kinh doanh của doanh nghiệp.
+              Những website phần mềm từ HomeNest.media luôn được tư vấn, phát triển, tối ưu nhằm mang lại hiệu quả rõ rệt cho hoạt động kinh doanh của doanh nghiệp.
             </p>
           </header>
         </div>

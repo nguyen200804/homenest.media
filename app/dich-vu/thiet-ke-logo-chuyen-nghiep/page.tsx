@@ -1,6 +1,6 @@
-import { ServiceBenefits, ServiceExperience, ServiceHero, ServiceHowWeWork, ServiceLogoShowcase, ServiceOverview, ServicePriceTable, ServiceProject, ServiceStrategy, ServiceTestimonials } from "@/components/sections/services";
+import { ServiceBenefits, ServiceExperience, ServiceHero, ServiceHowWeWork, ServiceLogoShowcase, ServiceOverview, ServicePriceTable, ServiceProject, ServiceResult, ServiceStrategy, ServiceTestimonials } from "@/components/sections/services";
 import styles from "./page.module.css";
-import { ManropeText, TextGradient } from "@/components/ui/Text";
+import { TextGradient } from "@/components/ui/Text";
 import { CTASection, FAQSection } from "@/components/sections";
 import { SwiperImage } from "@/components/ui/Swiper";
 
@@ -71,62 +71,7 @@ export default function Page() {
             </section>
 
 
-            <section className={styles.serviceResultSection}>
-                <div className="container">
-                    <div className={styles.serviceResultWrapper}>
-                        <header className={styles.serviceResultHeader}>
-                            <h2 className={styles.serviceResultTitle}>
-                                Kết quả <TextGradient text="HomeNest.media" /> mang lại cho khách hàng
-                            </h2>
-                        </header>
-
-                        <div className={styles.serviceResultBody}>
-                            {/* Cột trái: ảnh / minh họa (chưa có nội dung) */}
-                            <div className={styles.serviceResultMedia}></div>
-
-                            {/* Cột phải: lưới số liệu 2 hàng x 3 cột */}
-                            <div className={styles.serviceResultStats}>
-                                <div className={styles.serviceResultRow}>
-                                    <div className={styles.serviceResultItem}>
-                                        <h3 className={styles.serviceResultItemLabel}>Khách hàng hài lòng</h3>
-                                        <p className={styles.serviceResultItemNumber}><ManropeText text="1K" gradientText={true} /></p>
-                                    </div>
-                                    <span className={styles.serviceResultItemDivider}></span>
-                                    <div className={styles.serviceResultItem}>
-                                        <h3 className={styles.serviceResultItemLabel}>Đánh giá hài lòng của khách hàng</h3>
-                                        <p className={styles.serviceResultItemNumber}><ManropeText text="800" gradientText={true} /></p>
-                                    </div>
-                                    <span className={styles.serviceResultItemDivider}></span>
-                                    {/* Ô trống để giữ đủ 3 cột */}
-                                    <div
-                                        className={`${styles.serviceResultItem} ${styles.serviceResultItemEmpty}`}
-                                        aria-hidden="true"
-                                    ></div>
-                                </div>
-
-                                <span className={styles.serviceResultRowDivider}></span>
-
-                                <div className={styles.serviceResultRow}>
-                                    <div className={styles.serviceResultItem}>
-                                        <h3 className={styles.serviceResultItemLabel}>Dự án</h3>
-                                        <p className={styles.serviceResultItemNumber}><ManropeText text="2K" gradientText={true} /></p>
-                                    </div>
-                                    <span className={styles.serviceResultItemDivider}></span>
-                                    <div className={styles.serviceResultItem}>
-                                        <h3 className={styles.serviceResultItemLabel}>Đội ngũ</h3>
-                                        <p className={styles.serviceResultItemNumber}><ManropeText text="30" gradientText={true} /></p>
-                                    </div>
-                                    <span className={styles.serviceResultItemDivider}></span>
-                                    <div className={styles.serviceResultItem}>
-                                        <h3 className={styles.serviceResultItemLabel}>Tỉ lệ thành công</h3>
-                                        <p className={styles.serviceResultItemNumber}><ManropeText text="99%" gradientText={true} /></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <ServiceResult />
 
 
             <ServicePriceTable

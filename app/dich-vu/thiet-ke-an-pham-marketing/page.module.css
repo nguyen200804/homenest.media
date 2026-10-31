@@ -1,0 +1,33 @@
+/* Start - About Section */
+.aboutSection {
+    padding: 100px 0;
+}
+
+.aboutWrapper {
+    background-color: rgba(189, 43, 88, 0);
+}
+
+.aboutHeader {
+    margin-bottom: 50px;
+}
+
+.aboutTitle {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.aboutDescription {
+    background-color: rgba(147, 88, 231, 0);
+}
+
+.aboutContent {
+    background-color: rgba(36, 99, 255, 0);
+}
+
+.aboutCTA {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+/* End - About Section */

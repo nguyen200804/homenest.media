@@ -13,9 +13,28 @@ export type SwiperImageItem = {
     alt?: string;
 };
 
+export const DEFAULT_SWIPER_IMAGES: string[] = [
+    "/images/swiper-logo-chuyen-nghiep/image_01.webp",
+    "/images/swiper-logo-chuyen-nghiep/image_02.webp",
+    "/images/swiper-logo-chuyen-nghiep/image_03.webp",
+    "/images/swiper-logo-chuyen-nghiep/image_04.webp",
+    "/images/swiper-logo-chuyen-nghiep/image_05.webp",
+    "/images/swiper-logo-chuyen-nghiep/image_06.webp",
+    "/images/swiper-logo-chuyen-nghiep/image_07.webp",
+    "/images/swiper-logo-chuyen-nghiep/image_08.webp",
+    "/images/swiper-logo-chuyen-nghiep/image_09.webp",
+    "/images/swiper-logo-chuyen-nghiep/image_10.webp",
+    "/images/swiper-logo-chuyen-nghiep/image_11.webp",
+    "/images/swiper-logo-chuyen-nghiep/image_12.webp",
+    "/images/swiper-logo-chuyen-nghiep/image_13.webp",
+    "/images/swiper-logo-chuyen-nghiep/image_14.webp",
+    "/images/swiper-logo-chuyen-nghiep/image_15.webp",
+    "/images/swiper-logo-chuyen-nghiep/image_16.webp",
+];
+
 export type SwiperImageProps = {
     /** Danh sách ảnh: có thể là đường dẫn (string) hoặc object `{ src, alt }`. */
-    items: (string | SwiperImageItem)[];
+    items?: (string | SwiperImageItem)[];
     /** Tỉ lệ khung hình của slide, theo cú pháp CSS `aspect-ratio`. */
     aspectRatio?: string;
     /** Thuộc tính `sizes` của next/image, giúp tải ảnh đúng kích thước hiển thị. */
@@ -29,7 +48,7 @@ export type SwiperImageProps = {
 };
 
 export default function SwiperImage({
-    items,
+    items = DEFAULT_SWIPER_IMAGES,
     aspectRatio = "8 / 3",
     sizes = "(max-width: 768px) 100vw, 80vw",
     speed = 500,
