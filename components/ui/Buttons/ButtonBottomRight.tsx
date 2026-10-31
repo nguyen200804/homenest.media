@@ -1,4 +1,4 @@
-import styles from './ButtonBottomRight.module.css';
+import styles from "../../../styles/ui/Buttons/ButtonBottomRight.module.css";
 import ChevronRight from '../icons/Chevron';
 
 

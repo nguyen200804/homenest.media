@@ -185,7 +185,6 @@
 }
 
 .serviceTitle {
-    font-size: 48px;
 }
 
 .serviceStat {
@@ -215,7 +214,7 @@
     position: absolute;
     inset: 0;
     background: none;
-    -webkit-text-fill-color: var(--background);
+    -webkit-text-fill-color: #fff;
     -webkit-text-stroke: 0;
 }
 
@@ -331,7 +330,6 @@
 }
 
 .creationTitle {
-    font-size: 48px;
 }
 
 .creationDescription {
@@ -365,7 +363,6 @@
 }
 
 .brandStoryTitle {
-    font-size: 48px;
 }
 
 .brandStoryDivider {
@@ -441,7 +438,6 @@
 }
 
 .projectTitle {
-    font-size: 48px;
     margin-bottom: 12px;
 }
 
@@ -555,7 +551,6 @@
 }
 
 .teamSectionTitle {
-    font-size: 48px;
     margin-bottom: 20px;
 }
 
@@ -727,7 +722,6 @@
 }
 
 .testimonialTitle {
-    font-size: 48px;
     margin-bottom: 16px;
 }
 
@@ -907,7 +901,6 @@
 }
 
 .blogTitle {
-    font-size: 48px;
 }
 
 .blogDescription {

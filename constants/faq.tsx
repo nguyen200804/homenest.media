@@ -111,7 +111,7 @@ export const DEFAULT_FAQS: FAQItem[] = [
                         <a href="tel:0901689499">0901 689 499</a>
                     </li>
                     <li>
-                        <strong>Địa chỉ văn phòng</strong>: 28 Mai Chí Thọ, An Phú, TP. Thủ Đức, Hồ Chí Minh, Việt Nam
+                        <strong>Địa chỉ văn phòng</strong>: 28 Mai Chí Thọ, Phường Bình Trưng, Hồ Chí Minh, Việt Nam
                     </li>
                 </ul>
                 <p>Chúng tôi luôn sẵn sàng lắng nghe và tư vấn miễn phí cho bạn!</p>

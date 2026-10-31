@@ -1,6 +1,6 @@
 import Link from "next/link";
 import ChevronRight from "../icons/Chevron";
-import styles from "./ButtonTransparentToGradient.module.css";
+import styles from "../../../styles/ui/Buttons/ButtonTransparentToGradient.module.css";
 
 export interface ButtonTransparentToGradientProps {
     /** Nội dung chữ hiển thị trên nút. */

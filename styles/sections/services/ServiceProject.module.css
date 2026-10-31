@@ -1,0 +1,105 @@
+/* Start - Project Section */
+.projectSection {
+    background-color: #f0f2f4;
+    padding: 100px 0;
+}
+
+.projectHeader {
+    margin: 0 auto 50px;
+}
+
+.projectTitle {
+    margin-bottom: 12px;
+}
+
+.projectDescription {
+    background-color: rgba(88, 61, 227, 0);
+}
+
+.projectWrapper {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.projectWrapper::before,
+.projectWrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    z-index: 1;
+}
+
+.projectWrapper::before {
+    background-image: linear-gradient(to right, #f0f2f4, #f0f2f400);
+}
+
+.projectWrapper::after {
+    background-image: linear-gradient(to left, #f0f2f4, #f0f2f400);
+    right: 0;
+}
+
+.projectMarqueeTrack {
+    display: flex;
+    width: fit-content;
+    animation: marquee 30s linear infinite;
+}
+
+.projectMarquee:hover .projectMarqueeTrack {
+    animation-play-state: paused;
+}
+
+.projectMarqueeGroup {
+    aspect-ratio: 3 / 1.8;
+    grid-gap: 10px;
+    grid-template-areas: "project1 project1 project2"
+        "project3 project4 project4";
+    min-width: 800px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.projectMarqueeItem {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.projectMarqueeItem:nth-child(1) {
+    grid-area: project1;
+}
+
+.projectMarqueeItem:nth-child(2) {
+    grid-area: project2;
+}
+
+.projectMarqueeItem:nth-child(3) {
+    grid-area: project3;
+}
+
+.projectMarqueeItem:nth-child(4) {
+    grid-area: project4;
+}
+
+.projectMarqueeImage {
+    background-color: #401cf100;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* End - Project Section */

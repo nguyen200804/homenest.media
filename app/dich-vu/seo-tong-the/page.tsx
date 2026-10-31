@@ -253,7 +253,7 @@ export default function Page() {
             <FAQSection
                 headingText="Câu hỏi thường gặp về dịch vụ SEO tổng thể"
 
-                faqs={[
+                items={[
                     {
                         question: "SEO tổng thể là gì ?",
                         answer: (

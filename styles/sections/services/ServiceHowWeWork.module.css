@@ -1,0 +1,266 @@
+/* Start - Service How We Work Section */
+.serviceHowWeWork {
+    box-sizing: border-box;
+    background-color: #fff9;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+    padding: 100px 80px 100px;
+    display: flex;
+    position: relative;
+    overflow: visible;
+}
+
+
+
+.serviceHowWeWorkContent {
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 44px;
+    width: 100%;
+    max-width: 960px;
+    position: relative;
+}
+
+.serviceHowWeWorkLabel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    color: rgb(26, 59, 145);
+    z-index: 3;
+    position: relative;
+    margin: 0;
+}
+
+.serviceHowWeWorkLabelDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: rgba(22, 106, 217, 0.55);
+}
+
+.serviceHowWeWorkTimeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.serviceHowWeWorkRow {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 48px;
+    width: 100%;
+    z-index: 1;
+    justify-content: center;
+}
+
+.serviceHowWeWorkProgressWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100px;
+    flex-shrink: 0;
+    align-self: stretch;
+    overflow: hidden;
+}
+
+.serviceHowWeWorkStepNumber {
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    background: linear-gradient(121deg, #4769ad 1.31%, #e3474e 98.69%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    white-space: pre;
+    opacity: 0.4;
+    transition: opacity 0.4s ease-out;
+}
+
+.isActive .serviceHowWeWorkStepNumber {
+    opacity: 1;
+}
+
+.serviceHowWeWorkProgressBar {
+    width: 2px;
+    flex: 1;
+    background-color: rgba(24, 66, 163, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.serviceHowWeWorkProgressFill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgb(43, 92, 181);
+    transition: height 0.4s ease;
+}
+
+.serviceHowWeWorkText {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+    min-width: 0;
+    max-width: 640px;
+    padding: 0 0 80px;
+}
+
+.serviceHowWeWorkTextLast {
+    padding: 0 0 20px;
+}
+
+.serviceHowWeWorkRow:last-child .serviceHowWeWorkText {
+    padding-bottom: 0;
+}
+
+.serviceHowWeWorkHeading {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.serviceHowWeWorkBadge {
+    width: fit-content;
+    padding: 0 2px 2px 0;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow:
+        rgba(42, 40, 46, 0.18) 0 0.602187px 0.602187px -1.25px,
+        rgba(42, 40, 46, 0.16) 0 2.28853px 2.28853px -2.5px,
+        rgba(42, 40, 46, 0.06) 0 10px 10px -3.75px;
+}
+
+.serviceHowWeWorkBadgeInner {
+    padding: 2px 8px;
+    border-radius: 20px;
+    background: linear-gradient(121deg, #4769ad 1.31%, #e3474e 98.69%);
+}
+
+.serviceHowWeWorkBadgeText {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+}
+
+.serviceHowWeWorkStepTitle {
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    line-height: 1.1em;
+    width: fit-content;
+    padding-bottom: 0.08em;
+    background: linear-gradient(121deg, #4769ad 1.31%, #e3474e 98.69%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    margin: 0;
+}
+
+.serviceHowWeWorkStepDesc {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgb(18, 21, 40);
+    margin: 0;
+    font-weight: 300;
+}
+
+.serviceHowWeWorkStepDesc p {
+    margin: 0 0 0.6em;
+}
+
+.serviceHowWeWorkStepDesc p:last-child {
+    margin-bottom: 0;
+}
+
+.serviceHowWeWorkStepDesc a {
+    font-weight: 600;
+}
+
+.serviceHowWeWorkCtaWrapper {
+    position: relative;
+    z-index: 10;
+}
+
+@media (max-width: 1200px) {
+    .serviceHowWeWork {
+        padding: 100px 60px 50px;
+    }
+
+    .serviceHowWeWorkStepNumber {
+        font-size: 56px;
+    }
+
+    .serviceHowWeWorkStepTitle {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 996px) {
+    .serviceHowWeWork {
+        padding: 80px 40px 50px;
+    }
+
+    .serviceHowWeWorkRow {
+        gap: 32px;
+    }
+
+    .serviceHowWeWorkProgressWrapper {
+        width: 72px;
+    }
+
+    .serviceHowWeWorkStepNumber {
+        font-size: 48px;
+    }
+
+    .serviceHowWeWorkStepTitle {
+        font-size: 26px;
+    }
+
+    .serviceHowWeWorkStepDesc {
+        font-size: 14px;
+    }
+
+    .serviceHowWeWorkLabel {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .serviceHowWeWork {
+        padding: 60px 24px 30px;
+    }
+
+    .serviceHowWeWorkRow {
+        gap: 24px;
+    }
+
+    .serviceHowWeWorkProgressWrapper {
+        width: 56px;
+    }
+
+    .serviceHowWeWorkStepNumber {
+        font-size: 36px;
+    }
+
+    .serviceHowWeWorkStepTitle {
+        font-size: 22px;
+    }
+}
+
+/* End - Service How We Work Section */

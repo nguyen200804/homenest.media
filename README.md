@@ -48,7 +48,7 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 ```css
 .container {
-  max-width: 1400px;
+  max-width: 1440px;
   margin-inline: auto;
   padding-inline: 40px;
 }

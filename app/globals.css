@@ -12,12 +12,12 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
 }
+
 
 body {
   background: var(--background);
@@ -34,6 +34,10 @@ h6 {
   font-weight: 600;
   line-height: 1.25em;
   letter-spacing: -0.04em;
+}
+
+h2 {
+  font-size: 48px;
 }
 
 html {
@@ -54,7 +58,7 @@ a {
 
 /* Container & breakpoints  see README: "Quy d?nh Breakpoint (Responsive)" */
 .container {
-  max-width: 1400px;
+  max-width: 1440px;
   margin-inline: auto;
   padding-inline: 40px;
   box-sizing: content-box;
@@ -131,3 +135,122 @@ a {
     font-size: 14px;
   }
 }
+
+
+
+
+
+
+/* Start : Logo SHowcase */
+
+
+.serviceLogoShowcase {
+  background-color: rgba(76, 97, 171, 0);
+}
+
+.serviceLogoShowcaseWrapper {
+  background-color: rgba(184, 124, 45, 0);
+}
+
+.serviceLogoShowcaseHeader {
+  background-color: rgba(240, 30, 154, 0);
+}
+
+.serviceLogoShowcaseTitle {
+  background-color: rgba(26, 238, 82, 0);
+}
+
+.serviceLogoShowcaseBody {
+  background-color: rgba(30, 22, 181, 0);
+}
+
+.serviceLogoShowcaseViewer {
+  background-color: rgba(205, 250, 52, 0);
+}
+
+.serviceLogoShowcasePicker {
+  background-color: rgba(79, 172, 68, 0);
+}
+
+.serviceLogoShowcasePickerItem {
+  background-color: rgba(208, 172, 167, 0);
+}
+
+.serviceLogoShowcasePickerButton {
+  background-color: rgba(49, 89, 201, 0);
+}
+
+.serviceLogoShowcasePickerImage {
+  background-color: rgba(242, 82, 135, 0);
+}
+
+.serviceLogoShowcasePreview {
+  background-color: rgba(140, 119, 123, 0);
+}
+
+.serviceLogoShowcasePreviewCard {
+  background-color: rgba(49, 105, 165, 0);
+}
+
+.serviceLogoShowcasePreviewImage {
+  background-color: rgba(212, 234, 150, 0);
+}
+
+.serviceLogoShowcaseRange {
+  background-color: rgba(250, 2, 26, 0);
+}
+
+.serviceLogoShowcaseRangeTrack {
+  background-color: rgba(74, 37, 128, 0);
+}
+
+.serviceLogoShowcaseRangeFill {
+  background-color: rgba(13, 82, 94, 0);
+}
+
+.serviceLogoShowcaseRangeThumb {
+  background-color: rgba(13, 98, 193, 0);
+}
+
+.serviceLogoShowcaseThumbs {
+  background-color: rgba(58, 254, 0, 0);
+}
+
+.serviceLogoShowcaseThumbItem {
+  background-color: rgba(2, 30, 24, 0);
+}
+
+.serviceLogoShowcaseThumbButton {
+  background-color: rgba(30, 78, 14, 0);
+}
+
+.serviceLogoShowcaseThumbImage {
+  background-color: rgba(153, 100, 143, 0);
+}
+
+.serviceLogoShowcaseContent {
+  background-color: rgba(137, 140, 39, 0);
+}
+
+.serviceLogoShowcaseContentBody {
+  background-color: rgba(202, 100, 89, 0);
+}
+
+.serviceLogoShowcaseContentTitle {
+  background-color: rgba(207, 108, 192, 0);
+}
+
+.serviceLogoShowcaseContentDescription {
+  background-color: rgba(81, 190, 41, 0);
+}
+
+.serviceLogoShowcaseCta {
+  background-color: rgba(16, 164, 217, 0);
+}
+
+.isActive {
+  background-color: rgba(87, 35, 151, 0);
+}
+
+
+/* End - Logo showcase */

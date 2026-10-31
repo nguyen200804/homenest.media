@@ -272,7 +272,7 @@ export default function Page() {
 
             <ServicePriceTable
                 heading="Bảng giá dịch vụ SEO từ khóa - HomeNest.media"
-                plans={SEO_KEYWORD_PRICE_PLANS}
+                items={SEO_KEYWORD_PRICE_PLANS}
             />
 
             <CTASection />
@@ -284,7 +284,7 @@ export default function Page() {
                     <div className={styles.seoIntroWrapper}>
                         <header className={styles.seoIntroHeader}>
                             <h2 className={styles.seoIntroTitle}>
-                                Lợi ích khi sử dụng <TextGradient text="dịch vụ SEO từ khóa" /> tại HomeNest Media
+                                Lợi ích khi sử dụng <TextGradient text="dịch vụ SEO từ khóa" /> tại HomeNest.media
                             </h2>
                         </header>
 
@@ -375,7 +375,7 @@ export default function Page() {
                 imageAlt="Lộ trình hỗ trợ dịch vụ SEO từ khóa"
                 imageWidth={791}
                 imageHeight={493}
-                benefits={SEO_KEYWORD_BENEFITS}
+                items={SEO_KEYWORD_BENEFITS}
                 ctaText="Tư vấn ngay"
                 ctaLink="https://zalo.me/+84708070888"
             />
@@ -383,7 +383,7 @@ export default function Page() {
             <FAQSection
                 headingText="Câu hỏi thường gặp về dịch vụ SEO từ khóa"
 
-                faqs={[
+                items={[
                     {
                         question: "SEO từ khóa là gì ?",
                         answer: (

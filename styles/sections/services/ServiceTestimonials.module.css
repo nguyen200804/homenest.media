@@ -1,0 +1,233 @@
+/* Start - Service testimonials */
+
+.serviceTestimonials {
+    padding: 100px 0;
+}
+
+.serviceTestimonialsWrapper {
+    background-color: rgba(41, 40, 213, 0);
+}
+
+.serviceTestimonialsHeader {
+    margin-bottom: 50px;
+}
+
+.serviceTestimonialsBadge {
+    align-items: center;
+    gap: 0.3em;
+    margin: 0 0 6px;
+    display: inline-flex;
+    font-size: 24px;
+}
+
+.serviceTestimonialsBadgeIcon {
+    width: 1em;
+    height: 1em;
+}
+
+.serviceTestimonialsTitle {
+    margin: 0;
+}
+
+.serviceTestimonialsBody {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Carousel: khung hiển thị các thẻ đánh giá */
+.serviceTestimonialsCarousel {
+    position: relative;
+    flex: 1 1 55%;
+    min-width: 0;
+    height: 600px;
+    overflow: hidden;
+    touch-action: none;
+}
+
+.serviceTestimonialsCarousel:focus-visible {
+    outline: 2px solid #386bb7;
+    outline-offset: 4px;
+}
+
+/* Stage: lớp nền để định vị các thẻ theo tâm dọc của carousel */
+.serviceTestimonialsStage {
+    position: absolute;
+    inset: 0;
+}
+
+/* Card: một thẻ đánh giá; vị trí/độ mờ/tỉ lệ được gán bằng inline style từ component */
+.serviceTestimonialsCard {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    box-sizing: border-box;
+    width: min(600px, calc(100% - 160px));
+    height: 150px;
+    border-radius: 8px;
+    background-color: #f0f2f4;
+    opacity: 0;
+    pointer-events: none;
+    backface-visibility: hidden;
+    will-change: transform, opacity;
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out, background-color 0.6s ease-out;
+}
+
+.serviceTestimonialsCard.isActive {
+    background-color: transparent;
+    background-image: linear-gradient(262deg, #e24c4a 0%, #386bb7 100%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    pointer-events: auto;
+}
+
+.serviceTestimonialsCard.isClickable {
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.serviceTestimonialsCardContent {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    height: 100%;
+    padding: 15px 15px 15px 20px;
+    color: #000;
+    text-align: left;
+    transition: color 0.6s ease-out;
+}
+
+.serviceTestimonialsCard.isActive .serviceTestimonialsCardContent {
+    color: #fff;
+}
+
+.serviceTestimonialsCardQuoteIcon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    color: #000;
+    transition: color 0.25s ease-out;
+}
+
+.serviceTestimonialsCardQuoteIcon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.serviceTestimonialsCard.isActive .serviceTestimonialsCardQuoteIcon {
+    color: #fff;
+}
+
+.serviceTestimonialsCardAvatar {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    user-select: none;
+}
+
+.serviceTestimonialsCardInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.serviceTestimonialsCardHeader {
+    display: flex;
+    flex-direction: column;
+}
+
+.serviceTestimonialsCardName {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.serviceTestimonialsCardJob {
+    margin-top: -5px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 30px;
+    opacity: 0.7;
+    transition: opacity 0.25s ease-out;
+}
+
+.serviceTestimonialsCard.isActive .serviceTestimonialsCardJob {
+    opacity: 1;
+}
+
+.serviceTestimonialsCardText {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+/* Media: ảnh minh họa bên phải */
+.serviceTestimonialsMedia {
+    flex: 0 1 45%;
+    min-width: 0;
+}
+
+.serviceTestimonialsMediaImage {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .serviceTestimonialsBody {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .serviceTestimonialsCarousel {
+        flex-basis: auto;
+        width: 100%;
+        height: 500px;
+    }
+
+    .serviceTestimonialsCard {
+        left: 0;
+        width: calc(100% - 40px);
+        min-height: 150px;
+    }
+
+    .serviceTestimonialsCardContent {
+        gap: 1rem;
+        padding: 10px;
+    }
+
+    .serviceTestimonialsCardQuoteIcon {
+        top: 8px;
+        right: 8px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .serviceTestimonialsCardAvatar {
+        width: 70px;
+        height: 70px;
+        min-width: 70px;
+    }
+
+    .serviceTestimonialsCardName {
+        font-size: 15px;
+    }
+
+    .serviceTestimonialsCardJob {
+        font-size: 11px;
+        line-height: 20px;
+    }
+
+    .serviceTestimonialsCardText {
+        font-size: 13px;
+        line-height: 20px;
+    }
+}
+
+/* End - Service testimonials */

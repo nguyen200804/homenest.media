@@ -19,7 +19,16 @@ export const NAV_ITEMS: NavItem[] = [
           { label: "Email Marketing", href: "/dich-vu/email-marketing" },
         ],
       },
-      { label: "Branding", href: "/dich-vu/branding" },
+      {
+        label: "Branding", href: "/dich-vu/branding",
+        children: [
+          { label: "Thiết kế Logo Chuyên nghiệp", href: "/dich-vu/thiet-ke-logo-chuyen-nghiep" },
+          { label: "Thiết kế Nhận diện thương hiệu", href: "/dich-vu/thiet-ke-nhan-dien-thuong-hieu" },
+          { label: "Thiết kế Mascot – Linh vật thương hiệu", href: "/dich-vu/thiet-ke-mascot-linh-vat-thuong-hieu" },
+          { label: "Thiết Kế Profile Công Ty, Catalogue", href: "/dich-vu/thiet-ke-profile-catalogue" },
+          { label: "Thiết kế Ấn phẩm Marketing", href: "/dich-vu/thiet-ke-an-pham-marketing" },
+        ],
+      },
       {
         label: "Quảng cáo",
         href: "/dich-vu/quang-cao",

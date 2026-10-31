@@ -1,0 +1,74 @@
+.serviceWhyTrust {
+    background-color: #f0f2f4;
+    padding: 100px 0;
+}
+
+.serviceWhyTrustWrapper {
+    background-color: rgba(189, 43, 88, 0);
+}
+
+.serviceWhyTrustHeader {
+    max-width: 1000px;
+    margin: 0 auto 50px;
+
+}
+
+.serviceWhyTrustTitle {
+    text-align: center;
+}
+
+.serviceWhyTrustContent {
+    display: flex;
+    gap: 40px;
+}
+
+.serviceWhyTrustColImage {
+    flex: 4;
+}
+
+.serviceWhyTrustImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.serviceWhyTrustList {
+    grid-gap: 32px;
+    flex: 6;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    display: grid;
+}
+
+.serviceWhyTrustItem {
+    background-color: #fff;
+    padding: 28px;
+    border-radius: 16px;
+}
+
+.serviceWhyTrustItemIcon {
+    display: inline-block;
+    padding: 16px;
+    border-radius: 12px;
+    background-image: linear-gradient(var(--tg-angle, 90deg), var(--tg-from, #386bb7), var(--tg-to, #e24c4a));
+    color: #fff;
+}
+
+.serviceWhyTrustItemIcon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.serviceWhyTrustItemBody {
+    background-color: rgba(175, 80, 190, 0);
+}
+
+.serviceWhyTrustItemTitle {
+    font-size: 24px;
+    margin: 12px 0;
+}
+
+.serviceWhyTrustItemDesc {
+    background-color: rgba(230, 160, 50, 0);
+}

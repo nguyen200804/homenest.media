@@ -1,0 +1,63 @@
+/* Start - Service Overview Section */
+.serviceOverview {
+    background-color: #ffffff;
+    padding: 100px 0;
+}
+
+.serviceOverviewWrapper {
+    display: flex;
+    gap: 72px;
+    align-items: center;
+}
+
+.serviceOverviewContent {
+    flex: 1;
+}
+
+.serviceOverviewTitle {
+    margin-bottom: 20px;
+}
+
+.serviceOverviewTitle span {
+    display: block !important;
+}
+
+.serviceOverviewDescription {
+    background-color: rgba(147, 88, 231, 0);
+}
+
+.serviceOverviewDescription p,
+.serviceOverviewDescription ul,
+.serviceOverviewDescription ol {
+    margin-bottom: 1em;
+}
+
+/* Tailwind preflight reset list-style + padding nên phải khai báo lại để hiện dấu chấm / số */
+.serviceOverviewDescription ul,
+.serviceOverviewDescription ol {
+    padding-left: 1.5em;
+    list-style-position: outside;
+}
+
+.serviceOverviewDescription ul {
+    list-style-type: disc;
+}
+
+.serviceOverviewDescription ol {
+    list-style-type: decimal;
+}
+
+.serviceOverviewDescription li {
+    display: list-item;
+    margin-bottom: 0em;
+}
+
+.serviceOverviewMedia {
+    flex: 1;
+}
+
+.serviceOverviewImage {
+    border-radius: 20px;
+}
+
+/* End - Service Overview Section */

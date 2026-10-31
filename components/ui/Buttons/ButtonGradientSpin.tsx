@@ -1,6 +1,6 @@
 import Link from "next/link";
 import ChevronRight from "../icons/Chevron";
-import styles from "./ButtonGradientSpin.module.css";
+import styles from "../../../styles/ui/Buttons/ButtonGradientSpin.module.css";
 
 export interface ButtonGradientSpinProps {
     /** Nội dung chữ hiển thị trên nút. */
