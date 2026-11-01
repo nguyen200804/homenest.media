@@ -2,11 +2,7 @@ import type { Metadata } from "next";
 import { Anton, Geist_Mono, Manrope } from "next/font/google";
 import localFont from "next/font/local";
 
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-
 import "./globals.css";
-import { FooterCTA } from "@/components/layout";
 
 const homeNest = localFont({
   src: [
@@ -54,12 +50,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${homeNest.variable} ${geistMono.variable} ${anton.variable} ${manrope.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
-        <Header />
-        <main>
-          {children}
-        </main>
-        <FooterCTA />
-        <Footer />
+        {children}
       </body>
     </html>
   );
