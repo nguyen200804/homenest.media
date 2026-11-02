@@ -1,5 +1,6 @@
 import { CTASection, FAQSection } from "@/components/sections";
 import { ServiceBenefits, ServiceExperience, ServiceHero, ServiceHowWeWork, ServiceOverview, ServicePriceTable, ServiceProject, ServiceResult, ServiceStrategy, ServiceTestimonials } from "@/components/sections/services";
+import ServiceBrands from "@/components/sections/services/ServiceBrands";
 import { TextGradient } from "@/components/ui/Text";
 
 
@@ -385,6 +386,7 @@ export default function Page() {
 
             <ServiceTestimonials />
 
+            <ServiceBrands />
         </>
     )
 }

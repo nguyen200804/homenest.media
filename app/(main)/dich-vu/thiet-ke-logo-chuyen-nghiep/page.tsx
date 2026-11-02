@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import { TextGradient } from "@/components/ui/Text";
 import { CTASection, FAQSection } from "@/components/sections";
 import { SwiperImage } from "@/components/ui/Swiper";
+import ServiceBrands from "@/components/sections/services/ServiceBrands";
 
 
 
@@ -397,6 +398,9 @@ export default function Page() {
             />
 
             <ServiceTestimonials />
+
+
+            <ServiceBrands />
         </>
     )
 }

@@ -30,7 +30,7 @@ type CardPose = {
  */
 function getCardPose(relativePosition: number, total: number, isMobile: boolean): CardPose {
     const activeX = isMobile ? 30 : 50;
-    const farX = isMobile ? -40 : -100;
+    const farX = isMobile ? -40 : -70;
     const sideY = isMobile ? 160 : 170;
 
     if (relativePosition === 0) {

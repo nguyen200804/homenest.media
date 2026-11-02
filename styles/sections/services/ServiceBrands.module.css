@@ -1,0 +1,83 @@
+/* Start - Service Brands Section */
+.serviceBrandsSection {
+    background-color: rgba(41, 40, 213, 0);
+}
+
+.serviceBrandsWrapper {
+    display: flex;
+}
+
+.serviceBrandsColMedia {
+    width: 25%;
+}
+
+.serviceBrandsImage {
+    background-color: rgba(230, 75, 72, 0);
+}
+
+.serviceBrandsColContent {
+    width: 75%;
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+}
+
+.serviceBrandsHeader {
+    padding-right: calc((100vw - 1415px) / 2)
+}
+
+.serviceBrandsTitle {
+    font-size: 72px;
+}
+
+.serviceBrandsMarquee {
+    overflow: hidden;
+}
+
+.serviceBrandsMarqueeRtl,
+.serviceBrandsMarqueeLtr {
+    display: flex;
+    min-width: min-content;
+}
+
+.serviceBrandsMarqueeRtl ul,
+.serviceBrandsMarqueeLtr ul {
+    display: flex;
+}
+
+.serviceBrandsMarqueeRtl {
+    animation: 60s MarqueeSlide infinite linear;
+}
+
+.serviceBrandsMarqueeLtr {
+    animation: 60s MarqueeSlide infinite linear reverse;
+    margin-top: 16px;
+}
+
+.serviceBrandsList {}
+
+.serviceBrandsItem {
+    background-color: rgba(255, 40, 49, 0);
+}
+
+.serviceBrandsLogo {
+    height: 80px;
+    min-width: 160px;
+    width: 160px;
+    object-fit: contain;
+    margin-right: 20px;
+}
+
+@keyframes MarqueeSlide {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* End - Service Brands Section */

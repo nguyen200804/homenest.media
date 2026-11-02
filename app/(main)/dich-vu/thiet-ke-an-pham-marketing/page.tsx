@@ -4,6 +4,7 @@ import { TextGradient } from "@/components/ui/Text";
 import styles from "./page.module.css";
 import { SwiperImage } from "@/components/ui/Swiper";
 import { ButtonGradientSpin } from "@/components/ui/Buttons";
+import ServiceBrands from "@/components/sections/services/ServiceBrands";
 
 
 
@@ -307,6 +308,8 @@ export default function Page() {
 
 
             <ServiceTestimonials />
+
+            <ServiceBrands />
         </>
     )
 }

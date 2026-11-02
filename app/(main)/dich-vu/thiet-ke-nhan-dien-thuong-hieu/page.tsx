@@ -3,6 +3,7 @@ import { ServiceBenefits, ServiceExperience, ServiceHero, ServiceHowWeWork, Serv
 import { TextGradient } from "@/components/ui/Text";
 import styles from "./page.module.css";
 import { SwiperImage } from "@/components/ui/Swiper";
+import ServiceBrands from "@/components/sections/services/ServiceBrands";
 
 
 
@@ -322,6 +323,8 @@ export default function Page() {
             />
 
             <ServiceTestimonials />
+
+            <ServiceBrands />
         </>
     )
 }
